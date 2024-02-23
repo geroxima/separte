@@ -5,7 +5,7 @@ import { Fragment } from "react";
 export default function Home() {
   return (
     <Fragment>
-      <Header />
+      <Header titleButton="How it works" titleLink="Sign in" />
     </Fragment>
   );
 }
