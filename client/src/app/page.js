@@ -1,11 +1,9 @@
-import Header from "@/components/Header";
-import Image from "next/image";
-import { Fragment } from "react";
-
+import RecommendedCard from "@/components/RecommendedCard";
+import RecommendedCardList from "@/components/RecommendedCardList";
 export default function Home() {
   return (
-    <Fragment>
-      <Header />
-    </Fragment>
+    <>
+      <RecommendedCardList />
+    </>
   );
 }
