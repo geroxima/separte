@@ -29,6 +29,10 @@ require("./utils/passport.auth")(passport);
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+// Error handler
+//Import middlewares
+const errorMiddleware = require("./middlewares/errors");
+const ErrorHandler = require("./utils/errorHandler");
 // Logger middleware
 if (process.env.NODE_ENV === "development") {
   app.use(morgan("dev"));
@@ -44,6 +48,8 @@ app.get("/ping", (req, res) => {
 app.all("*", (req, res, next) => {
   next(new ErrorHandler(404, `${req.originalUrl} route not found`));
 });
+//use error handle
+app.use(errorMiddleware);
 
 app.listen(port, () => console.log(`Listening on port ${port}`));
 
