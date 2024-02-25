@@ -15,8 +15,8 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={inter.className}>
         <Header titleButton="How it works" titleLink="Sign in" />
-        <Footer />
         <main className="mx-auto max-w-5xl ">{children}</main>
+        <Footer />
       </body>
     </html>
   );
