@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 const LoginForm = () => {
   return (
-    <div className="my-12 flex w-full flex-row ">
+    <div className="mx-auto my-12 flex max-w-3xl flex-row ">
       <div className="flex-1">
         <Image
           src="/images/login.png"
