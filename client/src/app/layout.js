@@ -2,7 +2,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-
+import { Toaster } from "@/components/ui/toaster";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
@@ -17,6 +17,7 @@ export default function RootLayout({ children }) {
         <Header titleButton="How it works" titleLink="Sign in" />
         <main className="mx-auto max-w-5xl ">{children}</main>
         <Footer />
+        <Toaster />
       </body>
     </html>
   );
