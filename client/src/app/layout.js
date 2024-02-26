@@ -3,6 +3,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Toaster } from "@/components/ui/toaster";
+import HeroHeader from "@/components/HeroHeader";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
@@ -16,6 +17,7 @@ export default function RootLayout({ children }) {
       <body className={inter.className}>
         <Header titleButton="How it works" titleLink="Sign in" />
         <main className="mx-auto max-w-5xl ">{children}</main>
+
         <Footer />
         <Toaster />
       </body>
