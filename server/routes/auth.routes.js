@@ -17,10 +17,6 @@ router.post("/login", login);
 router.get("/logout", logout);
 router.post("/password/forgot", forgotPassword);
 router.post("/password/reset/:token", resetPassword);
-router.get(
-  "/auth/google",
-  passport.authenticate("google", { scope: ["profile", "email"] })
-);
 router.get("/login/success", (req, res) => {
   if (req.user) {
     sendToken(req.user, 200, res);
@@ -39,6 +35,10 @@ router.get("/login/failed", (req, res) => {
   res.redirect(CLIENT_URL);
 });
 router.get(
+  "/auth/google",
+  passport.authenticate("google", { scope: ["profile", "email"] })
+);
+router.get(
   "/auth/google/callback",
   passport.authenticate("google", {
     failureRedirect: `http://localhost:5173/login`,
@@ -56,16 +56,17 @@ router.get(
     successRedirect: `http://localhost:5173/login`,
   })
 );
-router.get(
-  "/auth/facebook",
-  passport.authenticate("facebook", { scope: ["profile"] })
-);
-router.get(
-  "/auth/facebook/callback",
-  passport.authenticate("facebook", {
-    failureRedirect: `http://localhost:3000/api/v1/login/failed`,
-    successRedirect: `http://localhost:3000/api/v1/login/success`,
-  })
-);
+
+// router.get(
+//   "/auth/facebook",
+//   passport.authenticate("facebook", { scope: ["profile"] })
+// );
+// router.get(
+//   "/auth/facebook/callback",
+//   passport.authenticate("facebook", {
+//     failureRedirect: `http://localhost:3000/api/v1/login/failed`,
+//     successRedirect: `http://localhost:3000/api/v1/login/success`,
+//   })
+// );
 
 module.exports = router;

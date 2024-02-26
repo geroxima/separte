@@ -45,6 +45,8 @@ app.get("/ping", (req, res) => {
   res.send("Hello World!");
 });
 
+app.use("/api", require("./routes/auth.routes"));
+
 app.all("*", (req, res, next) => {
   next(new ErrorHandler(404, `${req.originalUrl} route not found`));
 });
