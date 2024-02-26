@@ -18,6 +18,7 @@ module.exports = {
     },
     extend: {
       colors: {
+<<<<<<< HEAD
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -72,6 +73,16 @@ module.exports = {
         "accordion-up": "accordion-up 0.2s ease-out",
       },
     },
+=======
+        "primary-green": "#07c051",
+        "secondary-green": "#06421e",
+        "accent": "#9381ff",
+        "text-color": "#2b2727",
+        "white": "#FFFFFF",
+        "light-gray": "#f1f5f9"
+      }
+    }
+>>>>>>> 8a6e909 (Extend custom colors in the Tailwind config File)
   },
   plugins: [require("tailwindcss-animate")],
 }
