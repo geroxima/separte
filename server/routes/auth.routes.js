@@ -41,8 +41,8 @@ router.get(
 router.get(
   "/auth/google/callback",
   passport.authenticate("google", {
-    failureRedirect: `http://localhost:5173/login`,
-    successRedirect: `http://localhost:5173/login`,
+    failureRedirect: `http://localhost:3000/login`,
+    successRedirect: `http://localhost:3000/login`,
   })
 );
 router.get(
@@ -52,8 +52,8 @@ router.get(
 router.get(
   "/auth/github/callback",
   passport.authenticate("github", {
-    failureRedirect: `http://localhost:5173/login`,
-    successRedirect: `http://localhost:5173/login`,
+    failureRedirect: `http://localhost:3000/login`,
+    successRedirect: `http://localhost:3000/login`,
   })
 );
 

@@ -1,7 +1,10 @@
+"use client";
 import { AuthContext } from "../providers/AuthProvider";
 import { useContext, useEffect } from "react";
-
+import axios from "axios";
 export const useSession = () => {
+  const { state, login, logout } = useContext(AuthContext);
+  const isAuthenticated = state.isAuthenticated;
   useEffect(() => {
     const getUser = async () => {
       try {
@@ -19,8 +22,6 @@ export const useSession = () => {
     };
     getUser();
   }, [login]);
-  const { state, login, logout } = useContext(AuthContext);
-  const isAuthenticated = state.isAuthenticated;
 
   return { isAuthenticated, login, logout };
 };

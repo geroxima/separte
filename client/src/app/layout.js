@@ -4,6 +4,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Toaster } from "@/components/ui/toaster";
 import HeroHeader from "@/components/HeroHeader";
+import { AuthProvider } from "@/components/providers/AuthProvider";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
@@ -15,11 +16,14 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Header titleButton="How it works" titleLink="Sign in" />
-        <main className="mx-auto max-w-5xl ">{children}</main>
+        <AuthProvider>
+          <Header titleButton="How it works" titleLink="Sign in" />
 
-        <Footer />
-        <Toaster />
+          <main className="mx-auto max-w-5xl ">{children}</main>
+
+          <Footer />
+          <Toaster />
+        </AuthProvider>
       </body>
     </html>
   );

@@ -11,7 +11,7 @@ module.exports = function (passport) {
       {
         clientID: process.env.GOOGLE_CLIENT_ID,
         clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-        callbackURL: "/api/v1/auth/google/callback",
+        callbackURL: "/api/auth/google/callback",
         scope: ["profile", "email"],
       },
       async function (accessToken, refreshToken, profile, cb) {
@@ -43,7 +43,7 @@ module.exports = function (passport) {
       {
         clientID: process.env.GITHUB_CLIENT_ID,
         clientSecret: process.env.GITHUB_CLIENT_SECRET,
-        callbackURL: "/api/v1/auth/github/callback",
+        callbackURL: "/api/auth/github/callback",
         scope: ["user:email"], // Add this line
       },
       async function (accessToken, refreshToken, profile, done) {

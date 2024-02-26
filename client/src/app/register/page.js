@@ -1,3 +1,4 @@
+"use client";
 import RegisterForm from "@/components/RegisterForm";
 import { useSession } from "@/components/hooks/useSession";
 import { useEffect } from "react";
