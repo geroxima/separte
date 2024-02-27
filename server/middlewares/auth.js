@@ -1,28 +1,23 @@
-const nodemailer = require("nodemailer");
+const jwt = require("jsonwebtoken");
+const User = require("../models/user.model");
+const ErrorHandler = require("../utils/errorHandler");
+const catchAsyncErrors = require("./catchAsyncErrors");
 
-const sendEmail = async (options) => {
-  const transporter = nodemailer.createTransport({
-    host: process.env.SMTP_HOST,
-    port: process.env.SMTP_PORT,
-    auth: {
-      user: process.env.SMPT_EMAIL,
-      pass: process.env.SMTP_PASSWORD,
-    },
-  });
+//Check if user is authenticated or not
+exports.isAuthenticatedUser = catchAsyncErrors(async (req, res, next) => {
+  const token = req.cookies.token;
 
-  const message = {
-    from: `${process.env.SMTP_FROM_NAME} <${process.env.SMTP_FROM_EMAIL}>`,
-    to: options.email,
-    subject: options.subject,
-    text: options.message,
-  };
-
-  try {
-    await transporter.sendMail(message);
-    console.log("Email sent successfully");
-  } catch (error) {
-    console.error("An error occurred while sending the email:", error);
+  if (!token) {
+    return next(new ErrorHandler("Login first to access this resource.", 401));
   }
-};
 
-module.exports = sendEmail;
+  const decoded = jwt.verify(token, process.env.JWT_SECRET);
+  const user = await User.findById(decoded._id);
+
+  if (!user) {
+    return next(new ErrorHandler("Invalid token.", 401));
+  }
+
+  req.user = user;
+  next();
+});

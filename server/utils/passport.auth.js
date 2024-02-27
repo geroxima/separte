@@ -24,10 +24,17 @@ module.exports = function (passport) {
             console.log(profile);
             const newUser = new User({
               googleId: profile.id,
+              name: profile.displayName,
+              lastName: profile.name.familyName,
               username: profile.displayName,
               email: email,
+              address: "Harcoded Address",
+              birthDate: "01-01-2000",
+              img: profile.picture,
+
               password: profile.id,
             });
+            console.log(profile);
             await newUser.save();
             return cb(null, newUser);
           }

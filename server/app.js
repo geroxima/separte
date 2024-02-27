@@ -2,6 +2,7 @@ const express = require("express");
 const cors = require("cors");
 const morgan = require("morgan"); // Import morgan for logging
 const session = require("express-session");
+const { isAuthenticatedUser } = require("./middlewares/auth");
 const passport = require("passport");
 const app = express();
 require("dotenv").config();
@@ -50,7 +51,13 @@ app.get("/ping", (req, res) => {
   res.send("Hello World!");
 });
 
-app.use("/api", require("./routes/auth.routes"));
+const authRouter = require("./routes/auth.routes");
+app.use("/api", authRouter);
+
+const campaignRouter = require("./routes/campaign.routes");
+app.use("/api/campaigns", isAuthenticatedUser, campaignRouter);
+const donationRouter = require("./routes/donation.routes");
+app.use("/api/donations", isAuthenticatedUser, donationRouter);
 
 app.all("*", (req, res, next) => {
   next(new ErrorHandler(404, `${req.originalUrl} route not found`));

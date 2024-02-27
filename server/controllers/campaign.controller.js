@@ -1,0 +1,82 @@
+const Campaign = require("../models/campaign.model");
+const Donation = require("../models/donations.model");
+const User = require("../models/user.model");
+
+// Create a new campaign
+const createNewCampaign = async (req, res) => {
+  try {
+    const { title, description, startDate, endDate } = req.body;
+    const campaign = new Campaign({
+      title,
+      description,
+      startDate,
+      endDate,
+    });
+    await campaign.save();
+    res.status(201).json(campaign);
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+};
+
+// Delete a campaign
+const deleteCampaign = async (req, res) => {
+  try {
+    const { campaignId } = req.params;
+    await Campaign.findByIdAndDelete(campaignId);
+    await Donation.deleteMany({ campaign: campaignId });
+    res.status(200).json({ message: "Campaign deleted successfully" });
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+};
+
+// Edit a campaign
+const editCampaign = async (req, res) => {
+  try {
+    const { campaignId } = req.params;
+    const { title, description, startDate, endDate } = req.body;
+    const updatedCampaign = await Campaign.findByIdAndUpdate(
+      campaignId,
+      {
+        title,
+        description,
+        startDate,
+        endDate,
+      },
+      { new: true }
+    );
+    res.status(200).json(updatedCampaign);
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+};
+
+// Get all campaigns
+const getAllCampaigns = async (req, res) => {
+  try {
+    const campaigns = await Campaign.find();
+    res.status(200).json(campaigns);
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+};
+
+// Get campaign by ID
+const getCampaignById = async (req, res) => {
+  try {
+    const { campaignId } = req.params;
+    const campaign = await Campaign.findById(campaignId);
+    res.status(200).json(campaign);
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+};
+
+module.exports = {
+  createNewCampaign,
+  deleteCampaign,
+  editCampaign,
+  getAllCampaigns,
+  getCampaignById,
+};
