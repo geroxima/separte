@@ -63,7 +63,18 @@ const getCampaignById = async (req, res) => {
   }
 };
 
+const getCampaignDonationsById = async (req, res) => {
+  try {
+    const { campaignId } = req.params;
+    const donations = await Donation.find({ campaignId: campaignId });
+    res.status(200).json(donations);
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+};
+
 module.exports = {
+  getCampaignDonationsById,
   createNewCampaign,
   deleteCampaign,
   editCampaign,
