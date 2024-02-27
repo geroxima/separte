@@ -5,7 +5,7 @@ import { SeParteLogo } from "@/components/se-parte-logo"
 
 const Footer = () => {
   return (
-    <footer className="flex h-80 flex-col justify-around bg-gray-100">
+    <footer className="flex h-80 flex-col justify-around bg-gray-100 overflow-hidden">
       <div className="container mx-auto flex flex-row justify-around ">
         <div className="h-40 w-80">
           <div>
