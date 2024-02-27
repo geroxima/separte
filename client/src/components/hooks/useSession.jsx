@@ -12,6 +12,7 @@ export const useSession = () => {
           `${process.env.NEXT_PUBLIC_BACKEND_URL}/login/success`,
           { withCredentials: true },
         );
+        console.log(response);
         console.log(response.data);
         if (response.data.user) {
           login(response.data);
@@ -20,8 +21,11 @@ export const useSession = () => {
         console.log(error);
       }
     };
-    getUser();
-  }, [login]);
+
+    if (!isAuthenticated) {
+      getUser();
+    }
+  }, []);
 
   return { isAuthenticated, login, logout };
 };

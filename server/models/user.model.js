@@ -9,14 +9,32 @@ const userSchema = new mongoose.Schema({
     required: true,
     unique: true,
   },
+  name: {
+    type: String,
+  },
+  lastName: {
+    type: String,
+  },
+  birthDate: {
+    type: Date,
+  },
   email: {
     type: String,
     required: true,
     unique: true,
   },
+  profilePic: {
+    type: String,
+    default:
+      "https://img.freepik.com/premium-vector/avatar-icon002_750950-52.jpg?size=338&ext=jpg&ga=GA1.1.1700460183.1708300800&semt=sph",
+  },
+  address: {
+    type: String,
+  },
   password: {
     type: String,
     required: true,
+    select: false,
   },
   googleId: {
     type: String,
@@ -24,6 +42,18 @@ const userSchema = new mongoose.Schema({
   githubId: {
     type: String,
   },
+  donations: [
+    {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "Donation",
+    },
+  ],
+  campaigns: [
+    {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "Campaign",
+    },
+  ],
   resetPasswordToken: String,
   resetPasswordExpire: Date,
 });

@@ -1,7 +1,7 @@
 "use client";
 import React, { createContext, useReducer } from "react";
 import authReducer from "../reducers/authReducer.js";
-
+import axios from "axios";
 // Create the initial state for the auth context
 const initialState = {
   isAuthenticated: false,
@@ -26,6 +26,9 @@ export const AuthProvider = ({ children }) => {
   };
 
   const logout = () => {
+    axios.get(`${process.env.NEXT_PUBLIC_BACKEND_URL}/logout`, {
+      withCredentials: true,
+    });
     localStorage.removeItem("isAuthenticated");
     localStorage.removeItem("user");
     localStorage.removeItem("token");

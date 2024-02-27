@@ -41,7 +41,7 @@ const data = [
 ];
 const RecommendedCardList = () => {
   return (
-    <div className="flex flex-wrap justify-center gap-4">
+    <div className="my-20 flex flex-wrap justify-center gap-4">
       {data.map((campaign) => {
         return <RecommendedCard campaign={campaign} key={campaign.title} />;
       })}
