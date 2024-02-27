@@ -5,13 +5,8 @@ const User = require("../models/user.model");
 // Create a new campaign
 const createNewCampaign = async (req, res) => {
   try {
-    const { title, description, startDate, endDate } = req.body;
-    const campaign = new Campaign({
-      title,
-      description,
-      startDate,
-      endDate,
-    });
+    const fundraiserName = req.user.username;
+    const campaign = new Campaign({ ...req.body, fundraiserName });
     await campaign.save();
     res.status(201).json(campaign);
   } catch (error) {
@@ -35,15 +30,10 @@ const deleteCampaign = async (req, res) => {
 const editCampaign = async (req, res) => {
   try {
     const { campaignId } = req.params;
-    const { title, description, startDate, endDate } = req.body;
+
     const updatedCampaign = await Campaign.findByIdAndUpdate(
       campaignId,
-      {
-        title,
-        description,
-        startDate,
-        endDate,
-      },
+      req.body,
       { new: true }
     );
     res.status(200).json(updatedCampaign);

@@ -8,7 +8,6 @@ const campaignSchema = new mongoose.Schema(
     },
     img: {
       type: String,
-      required: true,
     },
     fundraiserName: {
       type: String,
@@ -40,7 +39,7 @@ const campaignSchema = new mongoose.Schema(
     },
     currentAmount: {
       type: Number,
-      required: true,
+      default: 0,
     },
     videoUrl: {
       type: String,

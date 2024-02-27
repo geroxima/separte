@@ -16,8 +16,15 @@ const createDonation = async (req, res) => {
       return res.status(404).json({ error: "Campaign not found" });
     }
 
+    const user = req.user.username;
+
+    const newDonation = {
+      ...req.body,
+      donorName: user,
+      campaignId,
+    };
     // Create a new donation
-    const donation = new Donation(req.body);
+    const donation = new Donation(newDonation);
 
     // Save the donation
     await donation.save();
