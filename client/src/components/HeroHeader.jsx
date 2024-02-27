@@ -9,7 +9,7 @@ export function HeroHeader  ({
 })  {
   return (
     <div className="container my-5 flex flex-col justify-around">
-      <div className="w-[705px]">
+      <div className=" w-7/6 md:w-3/4 lg:w-full">
         <div className="my-8">
           <p className="text-6xl text-black">
             Discover The Best and brightest Projects
@@ -23,22 +23,10 @@ export function HeroHeader  ({
             Back it and believe it.
           </p>
         </div>
-
-        <div className="flex w-[600px] items-center">
-          <input
-            type="search"
-            placeholder="Search Projects"
-            className="w-full rounded-lg border border-gray-300 bg-gray-100 py-2 pl-10 pr-4 text-gray-700 placeholder-gray-400 focus:border-[#07C051] focus:bg-white focus:outline-none"
-          />
-          <FontAwesomeIcon
-            icon={faSearch}
-            className="ml-2 h-12 w-12 rounded-md bg-[#07C051] p-2 text-white"
-          />
-        </div>
       </div>
-      <div className=" mt-5 h-[186px] bg-gray-100 ">
+      <div className=" mt-5 bg-gray-100 ">
         <div>
-          <p className="bg-white pb-2 text-center text-xl text-black">
+          <p className="bg-white pb-2 text-center font-semibold text-xl text-black">
             Within The Last Day
           </p>
 
