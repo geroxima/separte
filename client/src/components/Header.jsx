@@ -37,15 +37,7 @@ const Header = ({ titleButton, titleLink }) => {
 
       <div className="order-1 md:order-2 lg:order-2">
         <Link href="#">
-          <svg
-            width="115.29"
-            height="30"
-            viewBox="0 0 392 102"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <SeParteLogo />
-          </svg>
+          <SeParteLogo />
         </Link>
       </div>
 
