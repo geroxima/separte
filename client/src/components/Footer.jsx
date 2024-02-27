@@ -1,6 +1,7 @@
 import Link from "next/link";
 import React from "react";
 import Image from "next/image";
+import { SeParteLogo } from "@/components/se-parte-logo"
 
 const Footer = () => {
   return (
@@ -155,13 +156,9 @@ const Footer = () => {
         </div>
       </div>
       <div className="container mx-auto flex flex-row items-center justify-around">
-        <Image
-          src="/images/Frame.png"
-          alt="Descripción de la imagen"
-          width={110}
-          height={74}
-          className="mr-3"
-        />
+        <Link href="/">
+          <SeParteLogo/>
+        </Link>
         <div className="flex h-6 w-3/5 flex-row justify-between">
           <p>2024. All right reserved</p>
           <div className="flex h-6 w-48 justify-around">
