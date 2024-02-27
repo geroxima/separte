@@ -2,11 +2,11 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 
-const HeroHeader = ({
+export function HeroHeader  ({
   proyectosFinanciados = 50,
   inversiones = 100000,
   ProyectosRespaldo = 15000,
-}) => {
+})  {
   return (
     <div className="container my-5 flex flex-col justify-around">
       <div className="w-[705px]">
@@ -73,5 +73,3 @@ const HeroHeader = ({
     </div>
   );
 };
-
-export default HeroHeader;
