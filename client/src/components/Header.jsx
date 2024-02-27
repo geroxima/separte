@@ -3,6 +3,8 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus, faSearch } from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
+import { SeParteLogo } from "@/components/se-parte-logo";
+
 import { useSession } from "./hooks/useSession";
 import { useRouter } from "next/navigation";
 const Header = ({ titleButton, titleLink }) => {
