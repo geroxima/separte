@@ -4,8 +4,37 @@ import Link from "next/link";
 import ProgressDots from "./ProgressDots";
 import { Input } from "./ui/input";
 import { useState } from "react";
+import axios from "axios";
+import { useRouter } from "next/navigation";
 const LoginForm = () => {
+  const router = useRouter();
   const [stage, setStage] = useState(1);
+
+  const [form, setForm] = useState({
+    email: "",
+    password: "",
+    name: "",
+    lastName: "",
+    address: "",
+  });
+
+  const handleChange = (e) => {
+    setForm({ ...form, [e.target.name]: e.target.value });
+    console.log(form);
+  };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    axios
+      .post(`${process.env.NEXT_PUBLIC_BACKEND_URL}/register`, form)
+      .then((res) => {
+        console.log(res.data);
+        router.push("/login");
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+
   return (
     <div className="mx-auto my-12 flex max-w-3xl flex-row ">
       <div className="flex-1">
@@ -41,6 +70,8 @@ const LoginForm = () => {
                   id="email"
                   name="email"
                   placeholder="Enter your email"
+                  value={form.email}
+                  onChange={handleChange}
                   className="rounded-md border border-gray-300 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
               </div>
@@ -78,8 +109,8 @@ const LoginForm = () => {
         {stage === 2 && (
           <>
             <div>
-              <span className="font-semibold">Verifica tu </span>
-              <span className="font-extrabold"> CÓDIGO</span>{" "}
+              <span className="font-semibold">Registra tu </span>
+              <span className="font-extrabold"> INFORMACION PERSONAL</span>{" "}
             </div>
             <form
               className="flex w-full flex-col"
@@ -90,13 +121,43 @@ const LoginForm = () => {
             >
               <div className="mb-4 flex flex-col">
                 <label htmlFor="code" className="mb-2">
-                  Código
+                  Nombre
                 </label>
                 <Input
                   type="text"
-                  id="code"
-                  name="code"
-                  placeholder="Enter your code"
+                  id="name"
+                  name="name"
+                  placeholder="Ingresa tu nombre"
+                  value={form.name}
+                  onChange={handleChange}
+                  className="rounded-md border border-gray-300 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                />
+              </div>
+              <div className="mb-4 flex flex-col">
+                <label htmlFor="code" className="mb-2">
+                  Apellido
+                </label>
+                <Input
+                  type="text"
+                  id="lastName"
+                  name="lastName"
+                  placeholder="Ingresa tu apellido"
+                  value={form.lastName}
+                  onChange={handleChange}
+                  className="rounded-md border border-gray-300 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                />
+              </div>
+              <div className="mb-4 flex flex-col">
+                <label htmlFor="code" className="mb-2">
+                  Direccion
+                </label>
+                <Input
+                  type="text"
+                  id="address"
+                  name="address"
+                  placeholder="Ingresa tu direccion"
+                  value={form.address}
+                  onChange={handleChange}
                   className="rounded-md border border-gray-300 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
               </div>
@@ -107,20 +168,7 @@ const LoginForm = () => {
                 Siguiente
               </button>
             </form>
-            <div className="flex w-full items-center">
-              <span className="border-1 flex-1 border-solid border-gray-200"></span>
-              <span className="flex-shrink-0 px-1 text-gray-400">OR</span>
-              <span className="border-1 flex-1 border-solid border-gray-200"></span>
-            </div>
-            <div className="flex w-full flex-col justify-center gap-4">
-              <button className="rounded-md bg-red-500 px-4 py-2 text-white hover:bg-red-600">
-                Google
-              </button>
-              <button className="rounded-md bg-blue-600 px-4 py-2 text-white hover:bg-blue-700">
-                Facebook
-              </button>
-              <hr />
-            </div>
+
             <div>
               <span>
                 Ya tienes una cuenta?
@@ -138,13 +186,7 @@ const LoginForm = () => {
               <span className="font-semibold">Crea tu </span>
               <span className="font-extrabold"> CONTRASEÑA</span>{" "}
             </div>
-            <form
-              className="flex w-full flex-col"
-              onSubmit={(e) => {
-                e.preventDefault();
-                setStage(1);
-              }}
-            >
+            <form className="flex w-full flex-col" onSubmit={handleSubmit}>
               <div className="mb-4 flex flex-col">
                 <label htmlFor="password" className="mb-2">
                   Contraseña
@@ -154,6 +196,8 @@ const LoginForm = () => {
                   id="password"
                   name="password"
                   placeholder="Enter your password"
+                  value={form.password}
+                  onChange={handleChange}
                   className="rounded-md border border-gray-300 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
               </div>
@@ -164,20 +208,7 @@ const LoginForm = () => {
                 Siguiente
               </button>
             </form>
-            <div className="flex w-full items-center">
-              <span className="border-1 flex-1 border-solid border-gray-200"></span>
-              <span className="flex-shrink-0 px-1 text-gray-400">OR</span>
-              <span className="border-1 flex-1 border-solid border-gray-200"></span>
-            </div>
-            <div className="flex w-full flex-col justify-center gap-4">
-              <button className="rounded-md bg-red-500 px-4 py-2 text-white hover:bg-red-600">
-                Google
-              </button>
-              <button className="rounded-md bg-blue-600 px-4 py-2 text-white hover:bg-blue-700">
-                Facebook
-              </button>
-              <hr />
-            </div>
+
             <div>
               <span>
                 Ya tienes una cuenta?
