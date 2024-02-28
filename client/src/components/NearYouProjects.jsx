@@ -80,7 +80,7 @@ const NearYouProjects = () => {
   return (
     <div className="my-20">
       <div className="text-3xl font-bold">Proyectos cerca de ti</div>
-      <div className="my-4 flex w-full flex-col flex-wrap gap-4 md:flex-row">
+      <div className="my-4 flex w-full grid-cols-3 flex-col flex-wrap gap-4 md:grid">
         {data.map((campaign) => {
           return <NearYouCard campaign={campaign} key={campaign.title} />;
         })}
