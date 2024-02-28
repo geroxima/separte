@@ -19,7 +19,8 @@ export default function RootLayout({ children }) {
         <AuthProvider>
           <Header titleButton="How it works" titleLink="Sign in" />
 
-          <main className="mx-auto max-w-5xl ">{children}</main>
+          {/* <main className="mx-auto max-w-5xl "> */}
+          <main className="mx-auto ">{children}</main>
 
           <Footer />
           <Toaster />
