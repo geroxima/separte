@@ -26,7 +26,7 @@ const Header = ({ titleButton, titleLink }) => {
 
         {isAuthenticated && (
           <Link
-            href="#"
+            href="/project/new"
             className="ml-8 flex items-center text-lg font-medium text-text-color no-underline hover:text-gray-900"
           >
             <FontAwesomeIcon icon={faPlus} className="mr-4 h-5 w-5  text-lg" />
