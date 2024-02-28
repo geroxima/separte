@@ -4,8 +4,10 @@ import Link from "next/link";
 import { useState } from "react";
 import axios from "axios";
 import { useSession } from "./hooks/useSession";
+import { useRouter } from "next/navigation";
 const LoginForm = () => {
   const [email, setEmail] = useState("");
+  const router = useRouter();
   const [password, setPassword] = useState("");
   const { login } = useSession();
   const handleSubmit = async (e) => {
@@ -21,7 +23,7 @@ const LoginForm = () => {
       );
       console.log("Data", data);
       login(data);
-      navigate("/");
+      router.push("/");
     } catch (error) {
       console.log(error);
     }

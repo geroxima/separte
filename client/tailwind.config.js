@@ -20,9 +20,8 @@ module.exports = {
       colors: {
         "primary-green": "#07c051",
         "secondary-green": "#06421e",
-        accent: "#9381ff",
+        "accent": "#2100DB",
         "text-color": "#2b2727",
-        white: "#FFFFFF",
         "light-gray": "#f1f5f9",
       },
     },

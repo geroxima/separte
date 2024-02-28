@@ -5,7 +5,7 @@ import { SeParteLogo } from "@/components/se-parte-logo"
 
 const Footer = () => {
   return (
-    <footer className="flex h-80 flex-col justify-around bg-gray-100">
+    <footer className="flex h-80 flex-col justify-around bg-gray-100 overflow-hidden">
       <div className="container mx-auto flex flex-row justify-around ">
         <div className="h-40 w-80">
           <div>
@@ -136,19 +136,21 @@ const Footer = () => {
             <p className="text-2xl font-semibold">Language & Currency</p>
           </div>
           <div className="flex items-center space-x-4">
-            <select class="w-full appearance-none rounded border bg-white px-4 py-2 pr-8 leading-tight text-gray-700 focus:border-gray-500 focus:outline-none">
-              <option value="english" selected>
-                English
-              </option>
+            <select
+              className="w-full appearance-none rounded border bg-white px-4 py-2 pr-8 leading-tight text-gray-700 focus:border-gray-500 focus:outline-none"
+              defaultValue={"english"}
+            >
+              <option value="english">English</option>
               <option value="spanish">Spanish</option>
             </select>
           </div>
           <div>
-            <div class="w-full">
-              <select class="w-full appearance-none rounded border bg-white px-4 py-2 pr-8 leading-tight text-gray-700 focus:border-gray-500 focus:outline-none">
-                <option value="usd" selected>
-                  Dollar (US)
-                </option>
+            <div className="w-full">
+              <select
+                className="w-full appearance-none rounded border bg-white px-4 py-2 pr-8 leading-tight text-gray-700 focus:border-gray-500 focus:outline-none"
+                defaultValue={"usd"}
+              >
+                <option value="usd">Dollar (US)</option>
                 <option value="eur">Euro (EUR)</option>
               </select>
             </div>
