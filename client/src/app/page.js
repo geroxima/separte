@@ -1,11 +1,8 @@
-import RecommendedCardList from "@/components/RecommendedCardList";
+import FeatureCard from "@/components/FeaturedCard";
+
 import Image from "next/image";
 import { Fragment } from "react";
 
 export default function Home() {
-  return (
-    <Fragment>
-      <RecommendedCardList />
-    </Fragment>
-  );
+  return <Fragment></Fragment>;
 }
