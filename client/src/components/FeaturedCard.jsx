@@ -37,10 +37,10 @@ const FeaturedCard = ({ campaigns }) => {
             </div>
             <div className="flex justify-between">
               <span className="text-sm font-bold text-gray-500">
-                {campaigns[0].backers} backers
+                {campaigns[0].backers} donadores
               </span>
               <span className="text-sm font-bold text-gray-500">
-                {campaigns[0].daysLeft} days left
+                {campaigns[0].daysLeft} días restantes
               </span>
             </div>
           </div>
@@ -80,10 +80,10 @@ const FeaturedCard = ({ campaigns }) => {
             </div>
             <div className="flex justify-between">
               <span className="text-sm font-bold text-gray-500">
-                {campaigns[1].backers} backers
+                {campaigns[1].backers} donadores
               </span>
               <span className="text-sm font-bold text-gray-500">
-                {campaigns[1].daysLeft} days left
+                {campaigns[1].daysLeft} días restantes
               </span>
             </div>
           </div>
@@ -122,10 +122,10 @@ const FeaturedCard = ({ campaigns }) => {
             </div>
             <div className="flex justify-between">
               <span className="text-sm font-bold text-gray-500">
-                {campaigns[2].backers} backers
+                {campaigns[2].backers} donadores
               </span>
               <span className="text-sm font-bold text-gray-500">
-                {campaigns[2].daysLeft} days left
+                {campaigns[2].daysLeft} días restantes
               </span>
             </div>
           </div>
