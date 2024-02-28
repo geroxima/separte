@@ -28,7 +28,7 @@ const NewProjectPage = () => {
       <div className="w-full">
         <Image
           src="/images/manos_que_ayudan.png"
-          alt="login image"
+          alt="Imagen de login"
           width={500}
           height={500}
           className="object-fit h-full"
