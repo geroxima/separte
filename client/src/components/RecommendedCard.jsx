@@ -15,8 +15,8 @@ const campaignMockup = {
 
 const RecommendedCard = ({ campaign }) => {
   return (
-    <div className="flex max-w-[300px] flex-col rounded-lg shadow-lg">
-      <div>
+    <div className="flex flex-1 flex-col rounded-lg shadow-lg">
+      <div className="self-center">
         <Image
           src="https://img.freepik.com/fotos-premium/doctor-enfermera-haciendo-cirugia-paciente_51195-6233.jpg"
           alt="placeholder"
