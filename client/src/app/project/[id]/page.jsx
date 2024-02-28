@@ -9,8 +9,8 @@ import { DollarIcon } from "@/components/icons/dollar-icon";
 
 export default function ProjectPage() {
   const campaingData = {
-    title: "PC Building Project",
-    description: "This is a project to build a PC for myself. I need a new PC to work and play games. I am a student and I can't afford a new PC. I need your help to make this project a reality. I will be very grateful for your help. Thank you very much.",
+    title: "Proyecto de construcción de PC",
+    description: "Este es un proyecto para construir una PC para mí. Necesito una PC nueva para trabajar y jugar. Soy estudiante y no puedo permitirme una PC nueva. Necesito tu ayuda para hacer realidad este proyecto. Estaré muy agradecido por tu ayuda. Muchas gracias.",
     currentAmount: 850000,
     targetAmount: 10000000,
     backers: 150,
@@ -20,7 +20,7 @@ export default function ProjectPage() {
       "https://images.unsplash.com/photo-1625633979481-bcbaa10165f0?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     fundraiserName: "Juan Perez",
     fundraiserLocation: "Asuncion, Paraguay",
-    projectTopic: "Personal use",
+    projectTopic: "Uso Personal",
     projectBannerImg: "https://images.unsplash.com/photo-1668554245790-bfdc72f0bb3d?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     latestDonations: [
       {
@@ -46,7 +46,7 @@ export default function ProjectPage() {
     <section className="flex flex-col gap-y-5 mr-2 ml-2 md:mr-2 md:ml-2 lg:mr-0 lg:ml-0">
       <section className="flex flex-col gap-y-5 mt-10">
         <h1 className="font-semibold text-text-color text-2xl">
-          PC Building Project
+         Proyecto de construcción de PC
         </h1>
 
         {/* Main Image */}
@@ -55,7 +55,7 @@ export default function ProjectPage() {
             <div className="relative h-[300px] md:h-[300px] lg:h-auto w-full overflow-hidden rounded-md border border-light-gray border-solid">
               <Image
                 src={campaingData.fundraiserImg}
-                alt="The campaign Image"
+                alt="Imagen de la Campaña"
                 fill
                 objectFit="cover"
               />
@@ -76,7 +76,7 @@ export default function ProjectPage() {
                 Gs {formatMoneyWithDots(campaingData.currentAmount)}
               </h3>
               <h4 className="text-md text-text-color">
-                pledged of Gs {formatMoneyWithDots(campaingData.targetAmount)}
+                prenda de Gs {formatMoneyWithDots(campaingData.targetAmount)}
               </h4>
             </div>
             <div>
@@ -89,14 +89,14 @@ export default function ProjectPage() {
               <h3 className="text-2xl font-semibold text-primary-green">
                 {campaingData.daysLeft}
               </h3>
-              <h4 className="text-md text-text-color">days to go</h4>
+              <h4 className="text-md text-text-color">días restantes</h4>
             </div>
             <div className="flex flex-col my-3 gap-2">
               <button className="text-primary-green bg-secondary-green font-semibold rounded-md py-2 ">
-                Back this project
+                Apoya este Proyecto
               </button>
               <button className="text-text-color bg-light-gray font-semibold rounded-md py-2 flex justify-center gap-x-2 items-center">
-                Share this project{" "}
+                Comparte este proyecto{" "}
                 <Share1Icon aria-label="Share this Project" color="#2b2727" />{" "}
               </button>
             </div>
@@ -105,11 +105,11 @@ export default function ProjectPage() {
 
         <div className="flex flex-col gap-y-2">
           <h4 className="text-text-color font-medium ">{
-            campaingData.fundraiserName} is organizing this fundraiser to benefit himself
+            campaingData.fundraiserName} está organizando esta recaudación de fondos para su beneficio
           </h4>
           <div className="flex gap-5">
             <div>
-              <h3 className="font-semibold">Created 1 day ago</h3>
+              <h3 className="font-semibold">Creado hace 1 día</h3>
             </div>
             <div className="inline-block h-auto min-h-[1em] w-0.5 rounded-full self-stretch bg-text-color opacity-100 dark:opacity-50"></div>
             <div className="flex flex-row gap-x-1 items-center">
@@ -128,7 +128,7 @@ export default function ProjectPage() {
        
        
         <div className="flex flex-row mb-5 justify-between border-t-2 border-solid border-b-2 items-center">
-          <h2 className="text-lg font-medium my-5">Campaign story</h2>
+          <h2 className="text-lg font-medium my-5">Historia de la campaña</h2>
           <button className="text-primary-green bg-secondary-green font-semibold rounded-md py-2 px-5">
                 Back this project
           </button>
@@ -144,7 +144,7 @@ export default function ProjectPage() {
             <div className=" relative h-[300px] w-full overflow-hidden rounded-md border border-light-gray border-solid">
                 <Image
                   src={campaingData.projectBannerImg}
-                  alt="The campaign Image"
+                  alt="Imagen de la campaña"
                   fill
                   objectFit="cover"
                 />
@@ -160,20 +160,20 @@ export default function ProjectPage() {
             <div className=" relative size-16 overflow-hidden rounded-full">
                 <Image
                   src={campaingData.fundraiserProfileImg}
-                  alt="The campaign Image"
+                  alt="Imagen de la campaña"
                   fill
                   objectFit="cover"
                 />
             </div>
 
               <h4 className="font-semibold text-text-color text-lg">{campaingData.fundraiserName}</h4>
-              <h4 className="text-text-color font-light ">Project Founder</h4>
+              <h4 className="text-text-color font-light ">Fundador del Proyecto</h4>
             </div>
 
             <div className=" border border-gray-300 border-solid rounded-md px-2 py-2 flex flex-col items-center mt-5">
               <div className="flex flex-row w-full gap-x-5 mb-3">
                 <RisingArrowIcon/>
-                <h4 className="text-text-icon font-medium">150 people just donated</h4>
+                <h4 className="text-text-icon font-medium">150 personas acaban de donar</h4>
               </div>
               {campaingData.latestDonations.map((donation, index) => (
                 <div key={index} className="flex flex-row items-center gap-x-5 w-full border-b-[1px] border-text-color border-solid py-1">
@@ -187,10 +187,10 @@ export default function ProjectPage() {
              
               <div className="flex w-full justify-between mt-2">
                 <button className="text-text-color text-xl md:text-sm lg:text-sm font-medium border-primary-green border-solid border rounded-md py-1 px-2">
-                  See All
+                  Ver todo
                 </button>
                 <button className="text-text-color text-xl md:text-sm lg:text-sm font-medium border-primary-green border-solid border rounded-md py-1 px-2">
-                  See Top Donation
+                 Ver Donaciones Principales
                 </button>
               </div>
             </div>
