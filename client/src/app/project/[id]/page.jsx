@@ -188,7 +188,7 @@ export default function ProjectPage() {
 
             <div>
               <p className="text-pretty font-normal text-text-color"  >
-                {campaingData.description ? campaingData.description : <p style={{ display: "none" }}></p>}
+                {campaingData.description ? campaingData.description : ""}
               </p>
             </div>
           </article>
