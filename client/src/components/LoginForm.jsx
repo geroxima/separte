@@ -78,7 +78,7 @@ const LoginForm = () => {
               type="email"
               id="email"
               name="email"
-              placeholder="Enter your email"
+              placeholder="Ingresa tu Email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               className="rounded-md border border-gray-300 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
@@ -100,7 +100,7 @@ const LoginForm = () => {
               name="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              placeholder="Enter your password"
+              placeholder="Ingresa tu Contraseña"
               className="rounded-md border border-gray-300 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
           </div>
@@ -135,7 +135,7 @@ const LoginForm = () => {
           <span>
           ¿Nuevo en Se Parte?
             <Link href="/register" className="font- px-2 text-black">
-              Register
+              Registrarse
             </Link>
           </span>
         </div>
