@@ -6,7 +6,7 @@ const campaignMockup = {
   fundraiserName: "Recaudación de fondos 2",
   fundraiserImg: "img2.jpg",
   fundraiserLocation: "Ubicación 2",
-  description: "Descrip 2",
+  description: "lorem ipsum dolor sit amet",
   currentAmount: 2000,
   targetAmount: 6000,
   daysLeft: 20,
@@ -48,10 +48,10 @@ const RecommendedCard = ({ campaign }) => {
           </div>
           <div className="flex justify-between">
             <span className="text-sm font-bold text-gray-500">
-              {campaign.backers} backers
+              {campaign.backers} donadores
             </span>
             <span className="text-sm font-bold text-gray-500">
-              {campaign.daysLeft} days left
+              {campaign.daysLeft} días restantes
             </span>
           </div>
         </div>
