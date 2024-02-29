@@ -4,19 +4,19 @@ import Link from "next/link";
 const NearYouCard = ({ campaign }) => {
   return (
     <Link href={`/project/${campaign._id}`}>
-      <div className="col-span-1 flex flex-col rounded-lg shadow-lg ">
+      <div className="col-span-1 flex flex-col rounded-lg shadow-lg min-h-[300px] overflow-hidden">
         <div className="w-full">
           <Image
             src={campaign.img}
             alt="placeholder"
             width={250}
             height={150}
-            className="object-fit w-full"
+            className="max-h-[250px] w-full"
           />
         </div>
-        <div className="flex flex-col justify-center gap-1 p-4">
+        <div className="flex flex-col justify-between gap-1 p-4">
           <h3 className="m-0 text-xl font-bold">{campaign.title}</h3>
-          <p>{campaign.shortDescription}</p>
+          <p className="h-full overflow-hidden">{campaign.shortDescription}</p>
           <div className="flex flex-col gap-2">
             <div className="flex justify-between">
               <span className="text-xl font-semibold text-green-700">
