@@ -28,7 +28,7 @@ export default function ProjectPage() {
     description:
       "Este es un proyecto para construir una PC para mí. Necesito una PC nueva para trabajar y jugar. Soy estudiante y no puedo permitirme una PC nueva. Necesito tu ayuda para hacer realidad este proyecto. Estaré muy agradecido por tu ayuda. Muchas gracias.",
     currentAmount: 850000,
-    targetAmount: 10000000,
+    goalAmount: 10000000,
     backers: 150,
     daysLeft: 10,
     fundraiserProfileImg:
@@ -86,7 +86,7 @@ export default function ProjectPage() {
                 <div
                   className="h-full rounded-full bg-green-500 text-center text-xs text-white"
                   style={{
-                    width: `${(campaingData.currentAmount / campaingData.targetAmount) * 100}%`,
+                    width: `${(campaingData.currentAmount / campaingData.goalAmount) * 100}%`,
                   }}
                 ></div>
               </div>
@@ -94,7 +94,7 @@ export default function ProjectPage() {
                 Gs {formatMoneyWithDots(campaingData.currentAmount)}
               </h3>
               <h4 className="text-md text-text-color">
-                prenda de Gs {formatMoneyWithDots(campaingData.targetAmount)}
+                prenda de Gs {formatMoneyWithDots(campaingData.goalAmount)}
               </h4>
             </div>
             <div>

@@ -19,21 +19,21 @@ const FeaturedCard = ({ campaigns }) => {
 
         <div className="flex flex-col justify-center gap-1 p-4">
           <h3 className="m-0 text-xl font-bold">{campaigns[0].title}</h3>
-          <p>{campaigns[0].description}</p>
+          <p className="text-pretty">{campaigns[0].shortDescription}</p>
           <div className="flex flex-col gap-2">
             <div className="flex justify-between">
               <span className="text-xl font-semibold text-green-700">
                 {campaigns[0].currentAmount}
               </span>
               <span className="text-xl font-semibold text-green-700">
-                {campaigns[0].targetAmount}
+                {campaigns[0].goalAmount}
               </span>
             </div>
             <div className="h-4 w-full rounded-full bg-gray-200">
               <div
                 className="h-full rounded-full bg-green-500 text-center text-xs text-white"
                 style={{
-                  width: `${(campaigns[0].currentAmount / campaigns[0].targetAmount) * 100}%`,
+                  width: `${(campaigns[0].currentAmount / campaigns[0].goalAmount) * 100}%`,
                 }}
               ></div>
             </div>
@@ -64,21 +64,21 @@ const FeaturedCard = ({ campaigns }) => {
 
         <div className="flex flex-col gap-1 p-4">
           <h3 className="m-0 text-xl font-bold">{campaigns[1].title}</h3>
-          <p>{campaigns[1].description}</p>
+          <p className="text-pretty">{campaigns[1].shortDescription}</p>
           <div className="flex flex-col gap-2">
             <div className="flex justify-between">
               <span className="text-xl font-semibold text-green-700">
                 {campaigns[1].currentAmount}
               </span>
               <span className="text-xl font-semibold text-green-700">
-                {campaigns[1].targetAmount}
+                {campaigns[1].goalAmount}
               </span>
             </div>
             <div className="h-4 w-full rounded-full bg-gray-200">
               <div
                 className="h-full rounded-full bg-green-500 text-center text-xs text-white"
                 style={{
-                  width: `${(campaigns[1].currentAmount / campaigns[1].targetAmount) * 100}%`,
+                  width: `${(campaigns[1].currentAmount / campaigns[1].goalAmount) * 100}%`,
                 }}
               ></div>
             </div>
@@ -108,21 +108,21 @@ const FeaturedCard = ({ campaigns }) => {
 
         <div className="flex flex-col gap-1 p-4">
           <h3 className="m-0 text-xl font-bold">{campaigns[2].title}</h3>
-          <p>{campaigns[2].description}</p>
+          <p className="text-pretty">{campaigns[2].shortDescription}</p>
           <div className="flex flex-col gap-2">
             <div className="flex justify-between">
               <span className="text-xl font-semibold text-green-700">
                 {campaigns[2].currentAmount}
               </span>
               <span className="text-xl font-semibold text-green-700">
-                {campaigns[2].targetAmount}
+                {campaigns[2].goalAmount}
               </span>
             </div>
             <div className="h-4 w-full rounded-full bg-gray-200">
               <div
                 className="h-full rounded-full bg-green-500 text-center text-xs text-white"
                 style={{
-                  width: `${(campaigns[2].currentAmount / campaigns[2].targetAmount) * 100}%`,
+                  width: `${((campaigns[2].currentAmount + 1) / campaigns[2].goalAmount) * 100}%`,
                 }}
               ></div>
             </div>
