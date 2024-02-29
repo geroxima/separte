@@ -2,11 +2,11 @@ import Image from "next/image";
 import React from "react";
 
 const campaignMockup = {
-  title: "Campaign 2",
-  fundraiserName: "Fundraiser 2",
+  title: "Campaña 2",
+  fundraiserName: "Recaudación de fondos 2",
   fundraiserImg: "img2.jpg",
-  fundraiserLocation: "Location 2",
-  description: "Description 2",
+  fundraiserLocation: "Ubicación 2",
+  description: "Descrip 2",
   currentAmount: 2000,
   targetAmount: 6000,
   daysLeft: 20,
