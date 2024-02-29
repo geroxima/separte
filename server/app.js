@@ -58,7 +58,8 @@ const campaignRouter = require("./routes/campaign.routes");
 app.use("/api/campaigns", isAuthenticatedUser, campaignRouter);
 const donationRouter = require("./routes/donation.routes");
 app.use("/api/donations", isAuthenticatedUser, donationRouter);
-
+const paymentRouter = require("./routes/payments.routes");
+app.use("/api/payments", isAuthenticatedUser, paymentRouter);
 app.all("*", (req, res, next) => {
   next(new ErrorHandler(404, `${req.originalUrl} route not found`));
 });

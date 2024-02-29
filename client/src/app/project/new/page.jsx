@@ -2,6 +2,14 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { app } from "@/lib/utils/firebase";
+import {
+  getStorage,
+  ref,
+  uploadBytesResumable,
+  getDownloadURL,
+} from "firebase/storage";
+const storage = getStorage(app);
 import ProgressDots from "@/components/ProgressDots";
 import { Input } from "@/components/ui/input";
 import { useState } from "react";
@@ -13,15 +21,51 @@ import {
   SelectValue,
   SelectGroup,
 } from "@/components/ui/select";
-
+import { useEffect } from "react";
 import { Textarea } from "@/components/ui/textarea";
 const NewProjectPage = () => {
   const [stage, setStage] = useState(1);
+  const [file, setFile] = useState(null);
+  const [media, setMedia] = useState("");
 
+  console.log(media, "media");
+  console.log(file, "file");
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("submit");
   };
+
+  useEffect(() => {
+    const upload = () => {
+      const name = Date.now() + file.name;
+      const storageRef = ref(storage, name);
+
+      const uploadTask = uploadBytesResumable(storageRef, file);
+      uploadTask.on(
+        "state_changed",
+        (snapshot) => {
+          const progress =
+            (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+          console.log("Upload is " + progress + "% done");
+          switch (snapshot.state) {
+            case "paused":
+              console.log("Upload is paused");
+              break;
+            case "running":
+              console.log("Upload is running");
+              break;
+          }
+        },
+        (error) => {},
+        () => {
+          getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
+            setMedia(downloadURL);
+          });
+        },
+      );
+    };
+    file && upload();
+  }, [file]);
 
   return (
     <div className="mx-auto my-32 flex max-w-3xl flex-row ">
@@ -195,6 +239,7 @@ const NewProjectPage = () => {
                   Añade una imagen de portada
                 </label>
                 <input
+                  onChange={(e) => setFile(e.target.files[0])}
                   type="file"
                   className="rounded-md border-2 border-dashed border-gray-300 p-4"
                 />
