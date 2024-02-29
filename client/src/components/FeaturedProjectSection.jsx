@@ -45,13 +45,13 @@ const FeaturedProjectSection = ({ campaigns }) => {
   return (
     <div className="my-10">
       <div className=" my-4 flex gap-2 text-sm font-bold">
-        <Link href="/projects"> Todo </Link>
-        <Link href="/projects"> Diseño y Tecnologia </Link>
-        <Link href="/projects"> Arte y Ilustración </Link>
-        <Link href="/projects"> Películas/Cortos </Link>
-        <Link href="/projects"> Musica </Link>
-        <Link href="/projects"> Artesanía </Link>
-        <Link href="/projects"> Videojuegos </Link>
+        <Link href="/projects" className="block p-2 text-center rounded-full text-white bg-primary-green border border-primary-green mx-2"> Todo </Link>
+        <Link href="/projects" className="block p-2 text-center rounded-full bg-primary-white border border-primary-green mx-2"> Diseño y Tecnologia </Link>
+        <Link href="/projects" className="block p-2 text-center rounded-full bg-primary-white border border-primary-green mx-2"> Arte y Ilustración </Link>
+        <Link href="/projects" className="block p-2 text-center rounded-full bg-primary-white border border-primary-green mx-2"> Películas/Cortos </Link>
+        <Link href="/projects" className="block p-2 text-center rounded-full bg-primary-white border border-primary-green mx-2"> Musica </Link>
+        <Link href="/projects" className="block p-2 text-center rounded-full bg-primary-white border border-primary-green mx-2"> Artesanía </Link>
+        <Link href="/projects" className="block p-2 text-center rounded-full bg-primary-white border border-primary-green mx-2"> Videojuegos </Link>
       </div>
       <div className="text-3xl font-bold">Proyectos Destacados</div>
       <FeaturedCard campaigns={campaigns} />

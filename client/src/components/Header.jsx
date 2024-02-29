@@ -44,7 +44,7 @@ const Header = ({ titleButton, titleLink }) => {
       <div className="order-2 flex flex-row items-center justify-between md:order-3 lg:order-3">
         {isAuthenticated ? (
           <button
-            href="login"
+            href="/login"
             onClick={handleLogout}
             className="mr-11 flex items-center text-lg font-medium text-text-color no-underline hover:text-gray-900"
           >
