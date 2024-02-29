@@ -1,11 +1,11 @@
 import Link from "next/link";
 import React from "react";
 import Image from "next/image";
-import { SeParteLogo } from "@/components/se-parte-logo"
+import { SeParteLogo } from "@/components/se-parte-logo";
 
 const Footer = () => {
   return (
-    <footer className="flex h-80 flex-col justify-around bg-gray-100 overflow-hidden">
+    <footer className="flex h-80 flex-col justify-around overflow-hidden bg-gray-100">
       <div className="container mx-auto flex flex-row justify-around ">
         <div className="h-40 w-80">
           <div>
@@ -81,7 +81,7 @@ const Footer = () => {
             <ul className="list-none">
               <li className="mb-2">
                 <Link href="#" className="text-base text-gray-800 no-underline">
-                  Sobre Nosotros
+                  About US
                 </Link>
               </li>
               <li className="mb-2">
@@ -90,9 +90,10 @@ const Footer = () => {
                 </Link>
               </li>
               <li className="mb-2">
-                <Link href="#" className="text-base text-gray-800 no-underline">
-                  
-                </Link>
+                <Link
+                  href="#"
+                  className="text-base text-gray-800 no-underline"
+                ></Link>
               </li>
               <li className="mb-2">
                 <Link href="#" className="text-base text-gray-800 no-underline">
@@ -120,7 +121,7 @@ const Footer = () => {
               </li>
               <li className="mb-2">
                 <Link href="#" className="text-base text-gray-800 no-underline">
-                 Política de Privacidad
+                  Política de Privacidad
                 </Link>
               </li>
               <li className="mb-2">
@@ -159,7 +160,7 @@ const Footer = () => {
       </div>
       <div className="container mx-auto flex flex-row items-center justify-around">
         <Link href="/">
-          <SeParteLogo/>
+          <SeParteLogo />
         </Link>
         <div className="flex h-6 w-3/5 flex-row justify-between">
           <p>2024. Todos los derechos reservados</p>
