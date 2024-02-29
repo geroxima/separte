@@ -57,14 +57,14 @@ const LoginForm = () => {
   };
 
   return (
-    <div className="mx-auto my-12 flex max-w-3xl flex-row ">
-      <div className="flex-1">
+    <div className="mx-auto my-12 flex max-w-3xl flex-col md:flex-row lg:flex-row">
+      <div className="flex-1 w-full">
         <Image
           src="/images/login.png"
           alt="Imagen de Login"
           width={500}
           height={500}
-          className="object-fill"
+          className=""
         />
       </div>
       <div className="flex flex-1 flex-col items-center justify-center gap-4 px-4 py-8">
@@ -109,7 +109,7 @@ const LoginForm = () => {
           </div>
           <button
             type="submit"
-            className="rounded-md bg-blue-500 px-4 py-2 text-white hover:bg-blue-600"
+            className="rounded-md bg-primary-green px-4 py-2 text-text-color hover:bg-secondary-green hover:text-white"
           >
             Ingresar
           </button>
