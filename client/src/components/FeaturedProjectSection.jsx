@@ -41,7 +41,7 @@ const data = [
   },
 ];
 
-const FeaturedProjectSection = () => {
+const FeaturedProjectSection = ({ campaigns }) => {
   return (
     <div className="my-10">
       <div className=" my-4 flex gap-2 text-sm font-bold">
@@ -54,7 +54,7 @@ const FeaturedProjectSection = () => {
         <Link href="/projects"> Videojuegos </Link>
       </div>
       <div className="text-3xl font-bold">Proyectos Destacados</div>
-      <FeaturedCard campaigns={data} />
+      <FeaturedCard campaigns={campaigns} />
     </div>
   );
 };

@@ -46,6 +46,7 @@ const editCampaign = async (req, res) => {
 const getAllCampaigns = async (req, res) => {
   try {
     const campaigns = await Campaign.find();
+
     res.status(200).json(campaigns);
   } catch (error) {
     res.status(500).json({ error: error.message });

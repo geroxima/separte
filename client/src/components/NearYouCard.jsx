@@ -5,7 +5,7 @@ const NearYouCard = ({ campaign }) => {
     <div className="col-span-1 flex flex-col rounded-lg shadow-lg ">
       <div className="w-full">
         <Image
-          src="https://img.freepik.com/fotos-premium/doctor-enfermera-haciendo-cirugia-paciente_51195-6233.jpg"
+          src={campaign.img}
           alt="placeholder"
           width={250}
           height={150}
@@ -15,14 +15,14 @@ const NearYouCard = ({ campaign }) => {
 
       <div className="flex flex-col justify-center gap-1 p-4">
         <h3 className="m-0 text-xl font-bold">{campaign.title}</h3>
-        <p>{campaign.description}</p>
+        <p>{campaign.shortDescription}</p>
         <div className="flex flex-col gap-2">
           <div className="flex justify-between">
             <span className="text-xl font-semibold text-green-700">
               {campaign.currentAmount}
             </span>
             <span className="text-xl font-semibold text-green-700">
-              {campaign.targetAmount}
+              {campaign.goalAmount}
             </span>
           </div>
           <div className="h-4 w-full rounded-full bg-gray-200">

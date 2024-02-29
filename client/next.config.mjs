@@ -5,6 +5,8 @@ const nextConfig = {
       "img.freepik.com",
       "images.unsplash.com",
       "firebasestorage.googleapis.com",
+      "img.freepik.com",
+      "www.firebase.com",
     ],
   },
 };
