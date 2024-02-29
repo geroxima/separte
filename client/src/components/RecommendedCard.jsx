@@ -2,11 +2,11 @@ import Image from "next/image";
 import React from "react";
 
 const campaignMockup = {
-  title: "Campaign 2",
-  fundraiserName: "Fundraiser 2",
+  title: "Campaña 2",
+  fundraiserName: "Recaudación de fondos 2",
   fundraiserImg: "img2.jpg",
-  fundraiserLocation: "Location 2",
-  description: "Description 2",
+  fundraiserLocation: "Ubicación 2",
+  description: "lorem ipsum dolor sit amet",
   currentAmount: 2000,
   targetAmount: 6000,
   daysLeft: 20,
@@ -48,10 +48,10 @@ const RecommendedCard = ({ campaign }) => {
           </div>
           <div className="flex justify-between">
             <span className="text-sm font-bold text-gray-500">
-              {campaign.backers} backers
+              {campaign.backers} donadores
             </span>
             <span className="text-sm font-bold text-gray-500">
-              {campaign.daysLeft} days left
+              {campaign.daysLeft} días restantes
             </span>
           </div>
         </div>
