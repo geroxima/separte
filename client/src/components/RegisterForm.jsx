@@ -84,7 +84,7 @@ const LoginForm = () => {
             </form>
             <div className="flex w-full items-center">
               <span className="border-1 flex-1 border-solid border-gray-200"></span>
-              <span className="flex-shrink-0 px-1 text-gray-400">OR</span>
+              <span className="flex-shrink-0 px-1 text-gray-400">Acceder con</span>
               <span className="border-1 flex-1 border-solid border-gray-200"></span>
             </div>
             <div className="flex w-full flex-col justify-center gap-4">
