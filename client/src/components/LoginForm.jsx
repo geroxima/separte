@@ -108,7 +108,7 @@ const LoginForm = () => {
             type="submit"
             className="rounded-md bg-blue-500 px-4 py-2 text-white hover:bg-blue-600"
           >
-            Login
+            Ingresar
           </button>
         </form>
         <div className="flex w-full items-center">
