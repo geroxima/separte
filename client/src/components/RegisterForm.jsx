@@ -211,7 +211,7 @@ const LoginForm = () => {
 
             <div>
               <span>
-                Ya tienes una cuenta?
+                ¿Ya tienes una cuenta?
                 <Link href="/login" className="font- px-2 text-black">
                   Ingresar
                 </Link>
