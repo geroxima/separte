@@ -126,17 +126,17 @@ const NewProjectPage = () => {
   }, [file]);
 
   return (
-    <div className="mx-auto my-32 flex max-w-3xl flex-row ">
-      <div className="w-full">
+    <div className="mx-auto my-12 flex max-w-3xl flex-row  ">
+      <div className="flex-1">
         <Image
           src="/images/manos_que_ayudan.png"
           alt="Imagen de login"
           width={500}
           height={500}
-          className="object-fit h-full"
+          className="object-fill"
         />
       </div>
-      <div className="flex w-full flex-col items-center justify-center gap-4 px-20 py-8">
+      <div className="flex flex-1 flex-col items-center justify-center gap-4 overflow-auto px-20 py-8">
         <ProgressDots stage={stage} />
         {stage === 1 && (
           <>
@@ -232,7 +232,7 @@ const NewProjectPage = () => {
                   name="amount"
                   value={formData.amount}
                   onChange={handleInputChange}
-                  placeholder="Ingresa tu monto en dolares"
+                  placeholder="Ingresa tu monto en guaranies"
                   className="rounded-md border border-gray-300 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
               </div>
