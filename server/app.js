@@ -32,7 +32,12 @@ app.use(passport.session());
 // Passport configuration
 require("./utils/passport.auth")(passport);
 
-app.use(express.json());
+// Middleware to capture raw body
+app.use(
+  express.json({
+    verify: (req, res, buffer) => (req.rawBody = buffer),
+  })
+);
 app.use(express.urlencoded({ extended: true }));
 
 // Error handler
@@ -59,7 +64,7 @@ app.use("/api/campaigns", campaignRouter);
 const donationRouter = require("./routes/donation.routes");
 app.use("/api/donations", isAuthenticatedUser, donationRouter);
 const paymentRouter = require("./routes/payments.routes");
-app.use("/api/payments", isAuthenticatedUser, paymentRouter);
+app.use("/api/payments", paymentRouter);
 app.all("*", (req, res, next) => {
   next(new ErrorHandler(404, `${req.originalUrl} route not found`));
 });

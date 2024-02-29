@@ -110,7 +110,10 @@ export default function ProjectPage() {
               <h4 className="text-md text-text-color">días restantes</h4>
             </div>
             <div className="my-3 flex flex-col gap-2">
-              <button className="rounded-md bg-secondary-green py-2 font-semibold text-primary-green ">
+              <button
+                className="rounded-md bg-secondary-green py-2 font-semibold text-primary-green "
+                onClick={handlePay}
+              >
                 Apoya este Proyecto
               </button>
               <button className="flex items-center justify-center gap-x-2 rounded-md bg-light-gray py-2 font-semibold text-text-color">
@@ -148,7 +151,10 @@ export default function ProjectPage() {
       <section className="mb-5 flex flex-col">
         <div className="mb-5 flex flex-row items-center justify-between border-b-2 border-t-2 border-solid">
           <h2 className="my-5 text-lg font-medium">Historia de la campaña</h2>
-          <button className="rounded-md bg-secondary-green px-5 py-2 font-semibold text-primary-green">
+          <button
+            className="rounded-md bg-secondary-green px-5 py-2 font-semibold text-primary-green"
+            onClick={handlePay}
+          >
             Apoya este proyecto
           </button>
         </div>
