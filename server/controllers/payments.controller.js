@@ -2,7 +2,7 @@ const Stripe = require("stripe");
 const Campaign = require("../models/campaign.model");
 const Donation = require("../models/donations.model");
 const stripe = new Stripe(process.env.STRIPE_SECRET);
-const endpointSecret = "whsec_HdagJNZPNv4XBJ26xeTVEf1fm5VcOpq6";
+const endpointSecret = "whsec_p1UEz0JEWqltsfq6eqHWhpHiVgU7Ffsj";
 
 async function donateToAProjectById(req, res) {
   const { amount } = req.body;
