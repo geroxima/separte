@@ -16,7 +16,7 @@ async function donateToAProjectById(req, res) {
     line_items: [
       {
         price_data: {
-          currency: "usd",
+          currency: "pyg",
           product_data: {
             name: "Donation to a project",
             images: ["https://via.placeholder.com/150"],
@@ -76,7 +76,7 @@ async function donationWebhook(req, res) {
       await newDonation.save();
 
       await Campaign.findByIdAndUpdate(campaignId, {
-        $inc: { currentAmount: session.amount_total },
+        $inc: { currentAmount: session.amount_total, donorsCount: 1 },
       });
 
       campaign.donations.push(newDonation._id);
