@@ -7,9 +7,9 @@ const {
   getCampaignById,
   getCampaignDonationsById,
 } = require("../controllers/campaign.controller");
-
+const { isAuthenticatedUser } = require("../middlewares/auth");
 // Create a new campaign
-router.post("/create", createNewCampaign);
+router.post("/create", isAuthenticatedUser, createNewCampaign);
 
 // Delete a campaign
 router.delete("/:campaignId", deleteCampaign);

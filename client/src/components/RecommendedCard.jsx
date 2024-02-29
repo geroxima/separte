@@ -20,7 +20,7 @@ const RecommendedCard = ({ campaign }) => {
       <Link href={`/project/${campaign._id}`}>
         <div className="flex flex-col gap-1 p-4">
           <h3 className="m-0 text-xl font-bold">{campaign.title}</h3>
-          <p>{campaign.shortDescription}</p>
+          <p className="text-pretty">{campaign.shortDescription}</p>
           <div className="flex flex-col gap-2">
             <div className="flex justify-between">
               <span className="text-xl font-semibold text-green-700">
@@ -34,7 +34,7 @@ const RecommendedCard = ({ campaign }) => {
               <div
                 className="h-full rounded-full bg-green-500 text-center text-xs text-white"
                 style={{
-                  width: `${(campaign.currentAmount / campaign.targetAmount) * 100}%`,
+                  width: `${(campaign.currentAmount / campaign.goalAmount) * 100}%`,
                 }}
               ></div>
             </div>

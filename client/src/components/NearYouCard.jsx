@@ -30,7 +30,7 @@ const NearYouCard = ({ campaign }) => {
               <div
                 className="h-full rounded-full bg-green-500 text-center text-xs text-white"
                 style={{
-                  width: `${(campaign.currentAmount / campaign.targetAmount) * 100}%`,
+                  width: `${(campaign.currentAmount / campaign.goalAmount) * 100}%`,
                 }}
               ></div>
             </div>
