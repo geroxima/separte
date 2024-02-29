@@ -3,8 +3,8 @@ import React from "react";
 import Link from "next/link";
 const FeaturedCard = ({ campaigns }) => {
   return (
-    <div className="my-8 flex flex-col gap-4 md:grid md:grid-cols-12 md:grid-rows-2">
-      <div className="col-span-8 row-span-2 flex flex-col rounded-lg shadow-lg ">
+    <div className="my-8 flex flex-col gap-4 md:grid md:grid-cols-12 md:grid-rows-2 md:my-8">
+      <div className="col-span-8 row-span-2 flex flex-col rounded-lg shadow-lg">
         <Link href={`/project/${campaigns[0]._id}`}>
           <div>
             <Image
@@ -17,7 +17,7 @@ const FeaturedCard = ({ campaigns }) => {
           </div>
         </Link>
 
-        <div className="flex flex-col justify-center gap-1 p-4">
+        <div className="flex flex-col justify-center gap-1 p-4 h-auto">
           <h3 className="m-0 text-xl font-bold">{campaigns[0].title}</h3>
           <p className="text-pretty">{campaigns[0].shortDescription}</p>
           <div className="flex flex-col gap-2">
