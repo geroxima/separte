@@ -23,7 +23,7 @@ const WhoWeAre = () => {
           </div>
         </div>
       </div>
-      <div className="mt-36 flex flex-row justify-around">
+      <div className="mt-40 flex flex-row justify-around">
         <div className=" w-2/4">
           <h2 className="mb-2 text-3xl font-bold">Why We Started?</h2>
           <p className="text-lg">
@@ -44,66 +44,73 @@ const WhoWeAre = () => {
             alt="imagen lateral"
             width={600}
             height={400}
+            className="w-full"
           />
         </div>
       </div>
       <h2 className="mt-28 text-3xl font-bold">
         Meet Our <br /> Team
       </h2>
-      <div className="mt-8 flex flex-col justify-between md:flex-row  ">
-        <div className="container mt-5 flex flex-row justify-center sm:flex-col">
-          <div className="flex h-[386px] w-[196px] flex-col bg-gray-100 text-center">
-            <Image
-              src="/images/Pablo.jpg"
-              alt="imagen principal"
-              width={200}
-              height={200}
-            />
-            <div className="mt-7">
-              <p className="text-xl font-bold">Maylen Zaracho</p>
-              <p className="text-lg">Frontend Dev</p>
+      <div className="container mt-8">
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-4">
+          <div className="flex justify-center">
+            <div className="bg-gray-100 text-center">
+              <div className="p-4">
+                <Image
+                  src="/images/Pablo.jpg"
+                  alt="imagen principal"
+                  width={200}
+                  height={200}
+                  className="mb-3 w-full"
+                />
+                <h5 className="mb-2 text-xl font-bold">Pablo Ortiz</h5>
+                <p className="text-lg">Frontend Dev</p>
+              </div>
             </div>
           </div>
-        </div>
-        <div className="container flex flex-row justify-center sm:flex-col">
-          <div className="flex h-[386px] w-[196px] flex-col bg-gray-100 text-center">
-            <Image
-              src="/images/Pablo.jpg"
-              alt="imagen principal"
-              width={200}
-              height={200}
-            />
-            <div className="mt-7">
-              <p className="text-xl font-bold">Pablo Ortiz</p>
-              <p className="text-lg">Frontend Dev</p>
+          <div className="flex justify-center">
+            <div className="bg-gray-100 text-center">
+              <div className="p-4">
+                <Image
+                  src="/images/Pablo.jpg"
+                  alt="imagen principal"
+                  width={200}
+                  height={200}
+                  className="mb-3 w-full"
+                />
+                <h5 className="mb-2 text-xl font-bold">Marcos Ferreira</h5>
+                <p className="text-lg">Full Stack Dev</p>
+              </div>
             </div>
           </div>
-        </div>
-        <div className="container flex flex-row justify-center sm:flex-col">
-          <div className="flex h-[386px] w-[196px] flex-col bg-gray-100 text-center">
-            <Image
-              src="/images/Pablo.jpg"
-              alt="imagen principal"
-              width={200}
-              height={200}
-            />
-            <div className="mt-7">
-              <p className="text-xl font-bold">Marcos Ferreira</p>
-              <p className="text-lg">Full Stack Dev</p>
+          <div className="flex justify-center">
+            <div className="bg-gray-100 text-center">
+              <div className="p-4">
+                <Image
+                  src="/images/Pablo.jpg"
+                  alt="imagen principal"
+                  width={200}
+                  height={200}
+                  className="mb-3 w-full"
+                />
+                <h5 className="mb-2 text-xl font-bold">Adan Alvarez</h5>
+                <p className="text-lg">Frontend Dev</p>
+              </div>
             </div>
           </div>
-        </div>
-        <div className="container flex flex-row justify-center sm:flex-col">
-          <div className="flex h-[386px] w-[196px] flex-col bg-gray-100 text-center">
-            <Image
-              src="/images/Pablo.jpg"
-              alt="imagen principal"
-              width={200}
-              height={200}
-            />
-            <div className="mt-7">
-              <p className="text-xl font-bold">Adan Alvarez</p>
-              <p className="text-lg">Frontend Dev</p>
+          <div className="flex justify-center">
+            <div className="bg-gray-100 text-center">
+              <div className="p-4">
+                <Image
+                  src="/images/Pablo.jpg"
+                  alt="imagen principal"
+                  width={200}
+                  height={200}
+                  className="mb-3 w-full"
+                />
+                <h5 className="mb-2 text-xl font-bold">Maylen Zaracho</h5>
+                <p className="text-lg">Frontend Dev</p>
+              </div>
             </div>
           </div>
         </div>

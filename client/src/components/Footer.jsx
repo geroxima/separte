@@ -1,11 +1,11 @@
 import Link from "next/link";
 import React from "react";
 import Image from "next/image";
-import { SeParteLogo } from "@/components/se-parte-logo"
+import { SeParteLogo } from "@/components/se-parte-logo";
 
 const Footer = () => {
   return (
-    <footer className="flex h-80 flex-col justify-around bg-gray-100 overflow-hidden">
+    <footer className="flex h-80 flex-col justify-around overflow-hidden bg-gray-100">
       <div className="container mx-auto flex flex-row justify-around ">
         <div className="h-40 w-80">
           <div>
@@ -80,7 +80,10 @@ const Footer = () => {
           <div className="flex flex-row justify-between">
             <ul className="list-none">
               <li className="mb-2">
-                <Link href="#" className="text-base text-gray-800 no-underline">
+                <Link
+                  href="/About"
+                  className="text-base text-gray-800 no-underline"
+                >
                   About US
                 </Link>
               </li>
@@ -159,7 +162,7 @@ const Footer = () => {
       </div>
       <div className="container mx-auto flex flex-row items-center justify-around">
         <Link href="/">
-          <SeParteLogo/>
+          <SeParteLogo />
         </Link>
         <div className="flex h-6 w-3/5 flex-row justify-between">
           <p>2024. All right reserved</p>

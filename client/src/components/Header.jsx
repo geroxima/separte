@@ -36,7 +36,7 @@ const Header = ({ titleButton, titleLink }) => {
       </div>
 
       <div className="order-1 md:order-2 lg:order-2">
-        <Link href="#">
+        <Link href="/">
           <SeParteLogo />
         </Link>
       </div>
