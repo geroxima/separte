@@ -17,7 +17,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={inter.className}>
         <AuthProvider>
-          <Header titleButton="How it works" titleLink="Sign in" />
+          <Header titleButton="Como funciona" titleLink="Iniciar Sesión" />
 
           {/* <main className="mx-auto max-w-5xl "> */}
           <main className="mx-auto max-w-5xl">{children}</main>
