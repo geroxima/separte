@@ -9,13 +9,15 @@ import { RisingArrowIcon } from "@/components/icons/rising-icon";
 import { DollarIcon } from "@/components/icons/dollar-icon";
 import axios from "axios";
 import { useParams } from "next/navigation";
+import { useState } from "react";
 export default function ProjectPage() {
   const { id } = useParams();
+  const [amount, setAmount] = useState(50000);
   const handlePay = async () => {
     const res = await axios.post(
       `${process.env.NEXT_PUBLIC_BACKEND_URL}/payments/donate/${id}`,
       {
-        amount: 500000,
+        amount,
       },
       {
         withCredentials: true,
@@ -110,6 +112,20 @@ export default function ProjectPage() {
               <h4 className="text-md text-text-color">días restantes</h4>
             </div>
             <div className="my-3 flex flex-col gap-2">
+              <div className="relative">
+                <input
+                  type="number"
+                  min={10000}
+                  value={amount}
+                  onChange={(e) => setAmount(e.target.value)}
+                  className="relative rounded-md border border-gray-300 px-4 py-2 focus:border-transparent focus:outline-none focus:ring-2 focus:ring-primary-green"
+                  style={{ paddingRight: "2.5rem" }}
+                />
+                <span className="absolute right-2.5 top-1/2 -translate-y-1/2 transform text-black">
+                  Gs.
+                </span>
+              </div>
+
               <button
                 className="rounded-md bg-secondary-green py-2 font-semibold text-primary-green "
                 onClick={handlePay}
