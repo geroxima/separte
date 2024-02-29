@@ -21,7 +21,7 @@ const Header = ({ titleButton, titleLink }) => {
           className="py-1 pr-8 text-lg font-medium text-text-color no-underline hover:text-gray-900"
           style={{ display: "inline-block" }}
         >
-          Discover
+          Descubrir
         </Link>
 
         {isAuthenticated && (
@@ -30,7 +30,7 @@ const Header = ({ titleButton, titleLink }) => {
             className="ml-8 flex items-center text-lg font-medium text-text-color no-underline hover:text-gray-900"
           >
             <FontAwesomeIcon icon={faPlus} className="mr-4 h-5 w-5  text-lg" />
-            Start a New Project
+            Empezar un Nuevo Proyecto
           </Link>
         )}
       </div>
@@ -49,7 +49,7 @@ const Header = ({ titleButton, titleLink }) => {
             className="mr-11 flex items-center text-lg font-medium text-text-color no-underline hover:text-gray-900"
           >
             <FontAwesomeIcon icon={faSearch} className="mr-9 h-5 w-5 text-lg" />
-            Logout
+            Cerrar sesión
           </button>
         ) : (
           <Link
