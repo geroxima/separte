@@ -15,7 +15,7 @@ export default function ProjectPage() {
     const res = await axios.post(
       `${process.env.NEXT_PUBLIC_BACKEND_URL}/payments/donate/${id}`,
       {
-        amount: 1000,
+        amount: 500000,
       },
       {
         withCredentials: true,
