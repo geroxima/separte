@@ -57,7 +57,7 @@ const WhoWeAre = () => {
             <div className="bg-gray-100 text-center">
               <div className="p-4">
                 <Image
-                  src="/images/Pablo.jpg"
+                  src="/images/pablo.png"
                   alt="imagen principal"
                   width={200}
                   height={200}
@@ -72,7 +72,7 @@ const WhoWeAre = () => {
             <div className="bg-gray-100 text-center">
               <div className="p-4">
                 <Image
-                  src="/images/Pablo.jpg"
+                  src="/images/andres.png"
                   alt="imagen principal"
                   width={200}
                   height={200}
@@ -87,7 +87,7 @@ const WhoWeAre = () => {
             <div className="bg-gray-100 text-center">
               <div className="p-4">
                 <Image
-                  src="/images/Pablo.jpg"
+                  src="/images/gero.png"
                   alt="imagen principal"
                   width={200}
                   height={200}
@@ -102,11 +102,11 @@ const WhoWeAre = () => {
             <div className="bg-gray-100 text-center">
               <div className="p-4">
                 <Image
-                  src="/images/Pablo.jpg"
+                  src="/images/may.png"
                   alt="imagen principal"
                   width={200}
                   height={200}
-                  className="mb-3 w-full"
+                  className="mb-3 w-full h-75%"
                 />
                 <h5 className="mb-2 text-xl font-bold">Maylen Zaracho</h5>
                 <p className="text-lg">Frontend Dev</p>

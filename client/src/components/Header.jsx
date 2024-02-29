@@ -60,7 +60,9 @@ const Header = ({ titleButton, titleLink }) => {
             {titleLink}
           </Link>
         )}
-        <button className="bg-green h-10 w-40 rounded-lg border-none bg-primary-green px-4 py-2 text-lg text-white hover:cursor-pointer active:bg-secondary-green">
+        <button 
+        href="/about"
+        className="bg-green h-10 w-40 rounded-lg border-none bg-primary-green px-4 py-2 text-lg text-white hover:cursor-pointer active:bg-secondary-green">
           {titleButton}
         </button>
       </div>
