@@ -149,7 +149,7 @@ export default function ProjectPage() {
         <div className="mb-5 flex flex-row items-center justify-between border-b-2 border-t-2 border-solid">
           <h2 className="my-5 text-lg font-medium">Historia de la campaña</h2>
           <button className="rounded-md bg-secondary-green px-5 py-2 font-semibold text-primary-green">
-            Back this project
+            Apoya este proyecto
           </button>
         </div>
 
