@@ -4,7 +4,7 @@ import { faSearch } from "@fortawesome/free-solid-svg-icons";
 
 export function HeroHeader  ({
   proyectosFinanciados = 50,
-  inversiones = 100000,
+  inversiones = "10.00.000",
   ProyectosRespaldo = 15000,
 })  {
   return (
@@ -34,7 +34,7 @@ export function HeroHeader  ({
               <dt className="text-lg leading-7 text-gray-600">
                 Proyectos Financiados
               </dt>
-              <dd className="text-5xl font-semibold tracking-tight text-gray-900">
+              <dd className="text-3xl font-semibold tracking-tight text-gray-900">
                 {proyectosFinanciados}
               </dd>
             </div>
@@ -42,15 +42,15 @@ export function HeroHeader  ({
               <dt className="text-lg leading-7 text-gray-600">
                 Trabajo Creativo
               </dt>
-              <dd className="text-5xl font-semibold tracking-tight text-gray-900">
-                ${inversiones}
+              <dd className="text-3xl font-semibold tracking-tight text-gray-900">
+                Gs {inversiones}
               </dd>
             </div>
             <div className="flex flex-col items-center">
               <dt className="text-lg leading-7 text-gray-600">
                 Respaldo del Proyecto
               </dt>
-              <dd className="text-5xl font-semibold tracking-tight text-gray-900">
+              <dd className="text-3xl font-semibold tracking-tight text-gray-900">
                 {ProyectosRespaldo}
               </dd>
             </div>
