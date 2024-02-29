@@ -12,28 +12,27 @@ export function HeroHeader  ({
       <div className=" w-7/6 md:w-3/4 lg:w-full">
         <div className="my-8">
           <p className="text-6xl text-black">
-            Discover The Best and brightest Projects
+            Descubre los mejores y más brillantes Proyectos
           </p>
         </div>
         <div className="my-8">
           <p className="text-xl">
-            Support creative worker and see buildup of the project with each
-            updates.
+            Apoye al trabajador creativo y vea la construcción del proyecto con cada actualización.
             <br />
-            Back it and believe it.
+            Respaldalo y Créelo.
           </p>
         </div>
       </div>
       <div className=" mt-5 bg-gray-100 ">
         <div>
           <p className="bg-white pb-2 text-center font-semibold text-xl text-black">
-            Within The Last Day
+            Dentro del Último Día
           </p>
 
           <div className="mx-auto grid max-w-7xl grid-cols-1 gap-x-8 gap-y-16 px-6 py-6 text-center lg:grid-cols-3 lg:px-8">
             <div className="flex flex-col items-center">
               <dt className="text-lg leading-7 text-gray-600">
-                Projects Funded
+                Proyectos Financiados
               </dt>
               <dd className="text-5xl font-semibold tracking-tight text-gray-900">
                 {proyectosFinanciados}
@@ -41,7 +40,7 @@ export function HeroHeader  ({
             </div>
             <div className="flex flex-col items-center">
               <dt className="text-lg leading-7 text-gray-600">
-                Towards Creative Work
+                Trabajo Creativo
               </dt>
               <dd className="text-5xl font-semibold tracking-tight text-gray-900">
                 ${inversiones}
@@ -49,7 +48,7 @@ export function HeroHeader  ({
             </div>
             <div className="flex flex-col items-center">
               <dt className="text-lg leading-7 text-gray-600">
-                Project Backing
+                Respaldo del Proyecto
               </dt>
               <dd className="text-5xl font-semibold tracking-tight text-gray-900">
                 {ProyectosRespaldo}

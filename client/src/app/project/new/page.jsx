@@ -1,10 +1,17 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { app } from "@/lib/utils/firebase";
+import {
+  getStorage,
+  ref,
+  uploadBytesResumable,
+  getDownloadURL,
+} from "firebase/storage";
+const storage = getStorage(app);
 import ProgressDots from "@/components/ProgressDots";
 import { Input } from "@/components/ui/input";
-import { useState } from "react";
 import {
   Select,
   SelectContent,
@@ -13,15 +20,110 @@ import {
   SelectValue,
   SelectGroup,
 } from "@/components/ui/select";
-
+import { useEffect } from "react";
+import axios from "axios";
 import { Textarea } from "@/components/ui/textarea";
+import { useRouter } from "next/navigation";
+import { useToast } from "@/components/ui/use-toast";
 const NewProjectPage = () => {
+  const router = useRouter();
+  const { toast } = useToast();
   const [stage, setStage] = useState(1);
+  const [file, setFile] = useState(null);
+  const [formData, setFormData] = useState({
+    name: "",
+    location: "",
+    reason: "",
+    amount: "",
+    campaignName: "",
+    campaignDescription: "",
+    img: "",
+  });
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("submit");
+    const newCampaign = {
+      category: formData.reason,
+      shortDescription: formData.campaignDescription,
+      deadline: "2024-10-10",
+      location: "Encarnacion",
+      goalAmount: formData.amount,
+      title: formData.campaignName,
+      img: formData.img,
+    };
+    axios
+      .post(
+        `${process.env.NEXT_PUBLIC_BACKEND_URL}/campaigns/create`,
+        newCampaign,
+        {
+          withCredentials: true,
+        },
+      )
+      .then((res) => {
+        console.log(res);
+        toast({
+          title: "Campaña creada exitosamente!",
+          description: "Redirigiendo a la pagina del proyecto",
+        });
+        router.push(`/project/${res.data._id}`);
+      })
+      .catch((err) => {
+        console.log(err);
+        toast({
+          title: "Ha ocurrido un error :c",
+          description: "Sentimos mucho las inconveniencias",
+        });
+      });
   };
+
+  const handleInputChange = (e) => {
+    if (e?.target) {
+      setFormData({
+        ...formData,
+        [e.target.name]: e.target.value,
+      });
+    } else {
+      setFormData({
+        ...formData,
+        reason: e,
+      });
+    }
+  };
+
+  useEffect(() => {
+    const upload = () => {
+      const name = Date.now() + file.name;
+      const storageRef = ref(storage, name);
+
+      const uploadTask = uploadBytesResumable(storageRef, file);
+      uploadTask.on(
+        "state_changed",
+        (snapshot) => {
+          const progress =
+            (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+          console.log("Upload is " + progress + "% done");
+          switch (snapshot.state) {
+            case "paused":
+              console.log("Upload is paused");
+              break;
+            case "running":
+              console.log("Upload is running");
+              break;
+          }
+        },
+        (error) => {},
+        () => {
+          getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
+            setFormData({
+              ...formData,
+              img: downloadURL,
+            });
+          });
+        },
+      );
+    };
+    file && upload();
+  }, [file]);
 
   return (
     <div className="mx-auto my-32 flex max-w-3xl flex-row ">
@@ -50,33 +152,38 @@ const NewProjectPage = () => {
               }}
             >
               <div className="mb-4 flex flex-col">
-                <label htmlFor="email" className="mb-2">
+                <label htmlFor="name" className="mb-2">
                   ¿Cual es tu nombre?
                 </label>
                 <Input
                   type="text"
                   id="name"
                   name="name"
+                  value={formData.name}
+                  onChange={handleInputChange}
                   className="rounded-md border border-gray-300 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
               </div>
               <div className="mb-4 flex flex-col">
-                <label htmlFor="email" className="mb-2">
+                <label htmlFor="location" className="mb-2">
                   ¿Donde vives?
                 </label>
                 <Input
-                  type="location"
+                  type="text"
                   id="location"
                   name="location"
+                  value={formData.location}
+                  onChange={handleInputChange}
                   className="rounded-md border border-gray-300 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
               </div>
               <div className="mb-4 flex flex-col">
-                <label htmlFor="email" className="mb-2">
+                <label htmlFor="reason" className="mb-2">
                   ¿Cual es la razon de tu campaña/colecta?
                 </label>
                 <Select
-                //   onValueChange={field.onChange}
+                  value={formData.reason}
+                  onValueChange={handleInputChange}
                 >
                   <SelectTrigger>
                     <SelectValue placeholder="Selecciona una razon" />
@@ -116,13 +223,15 @@ const NewProjectPage = () => {
               }}
             >
               <div className="mb-4 flex flex-col ">
-                <label htmlFor="code" className="mb-2">
+                <label htmlFor="amount" className="mb-2">
                   ¿Cuanto dinero necesitas?
                 </label>
                 <Input
                   type="text"
-                  id="name"
-                  name="name"
+                  id="amount"
+                  name="amount"
+                  value={formData.amount}
+                  onChange={handleInputChange}
                   placeholder="Ingresa tu monto en dolares"
                   className="rounded-md border border-gray-300 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
@@ -173,28 +282,37 @@ const NewProjectPage = () => {
             </div>
             <form className="flex w-full flex-col" onSubmit={handleSubmit}>
               <div className="mb-4 flex flex-col">
-                <label htmlFor="password" className="mb-2">
+                <label htmlFor="campaignName" className="mb-2">
                   ¿Cual es el nombre de tu campaña?
                 </label>
                 <Input
                   type="text"
-                  id="password"
-                  name="password"
+                  id="campaignName"
+                  name="campaignName"
+                  value={formData.campaignName}
+                  onChange={handleInputChange}
                   placeholder=""
                   className="rounded-md border border-gray-300 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
               </div>
               <div className="mb-4 flex flex-col">
-                <label htmlFor="password" className="mb-2">
+                <label htmlFor="campaignDescription" className="mb-2">
                   ¿De que se trata tu campaña?
                 </label>
-                <Textarea placeholder="" />
+                <Textarea
+                  name="campaignDescription"
+                  id="campaignDescription"
+                  value={formData.campaignDescription}
+                  onChange={handleInputChange}
+                  placeholder=""
+                />
               </div>
               <div className="mb-4 flex flex-col">
-                <label htmlFor="password" className="mb-2">
+                <label htmlFor="file" className="mb-2">
                   Añade una imagen de portada
                 </label>
                 <input
+                  onChange={(e) => setFile(e.target.files[0])}
                   type="file"
                   className="rounded-md border-2 border-dashed border-gray-300 p-4"
                 />

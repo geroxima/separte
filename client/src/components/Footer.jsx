@@ -9,28 +9,28 @@ const Footer = () => {
       <div className="container mx-auto flex flex-row justify-around ">
         <div className="h-40 w-80">
           <div>
-            <p className="mb-4 text-2xl font-semibold">Projects</p>
+            <p className="mb-4 text-2xl font-semibold">Proyectos</p>
           </div>
           <div className="flex flex-row justify-between">
             <ul className="list-none">
               <li className="mb-2">
                 <Link href="#" className="text-base text-gray-800 no-underline">
-                  All
+                  Todo
                 </Link>
               </li>
               <li className="mb-2">
                 <Link href="#" className="text-base text-gray-800 no-underline">
-                  Antique
+                  Antiguo
                 </Link>
               </li>
               <li className="mb-2">
                 <Link href="#" className="text-base text-gray-800 no-underline">
-                  Design & Arts
+                  Arte y Diseño
                 </Link>
               </li>
               <li className="mb-2">
                 <Link href="#" className="text-base text-gray-800 no-underline">
-                  Games & Toys
+                  Videojuegos y juguetes
                 </Link>
               </li>
             </ul>
@@ -42,7 +42,7 @@ const Footer = () => {
                     href="#"
                     className="text-base text-gray-800 no-underline"
                   >
-                    Film
+                    Películas
                   </Link>
                 </li>
                 <li className="mb-2">
@@ -50,7 +50,7 @@ const Footer = () => {
                     href="#"
                     className="text-base text-gray-800 no-underline"
                   >
-                    Food
+                    Comida
                   </Link>
                 </li>
                 <li className="mb-2">
@@ -58,7 +58,7 @@ const Footer = () => {
                     href="#"
                     className="text-base text-gray-800 no-underline"
                   >
-                    Music
+                    Musica
                   </Link>
                 </li>
                 <li className="mb-2">
@@ -66,7 +66,7 @@ const Footer = () => {
                     href="#"
                     className="text-base text-gray-800 no-underline"
                   >
-                    Technology
+                    Tecnología
                   </Link>
                 </li>
               </ul>
@@ -80,26 +80,24 @@ const Footer = () => {
           <div className="flex flex-row justify-between">
             <ul className="list-none">
               <li className="mb-2">
-                <Link
-                  href="/About"
-                  className="text-base text-gray-800 no-underline"
-                >
+                <Link href="#" className="text-base text-gray-800 no-underline">
                   About US
                 </Link>
               </li>
               <li className="mb-2">
                 <Link href="#" className="text-base text-gray-800 no-underline">
-                  Explore
+                  Explorar
                 </Link>
               </li>
               <li className="mb-2">
-                <Link href="#" className="text-base text-gray-800 no-underline">
-                  Login
-                </Link>
+                <Link
+                  href="#"
+                  className="text-base text-gray-800 no-underline"
+                ></Link>
               </li>
               <li className="mb-2">
                 <Link href="#" className="text-base text-gray-800 no-underline">
-                  Contact
+                  Contacto
                 </Link>
               </li>
             </ul>
@@ -113,22 +111,22 @@ const Footer = () => {
             <ul className="list-none">
               <li className="mb-2">
                 <Link href="#" className="text-base text-gray-800 no-underline">
-                  Legal Information
+                  Información Legal
                 </Link>
               </li>
               <li className="mb-2">
                 <Link href="#" className="text-base text-gray-800 no-underline">
-                  Fees Policy
+                  Política de Tarifas
                 </Link>
               </li>
               <li className="mb-2">
                 <Link href="#" className="text-base text-gray-800 no-underline">
-                  Privacy Policy
+                  Política de Privacidad
                 </Link>
               </li>
               <li className="mb-2">
                 <Link href="#" className="text-base text-gray-800 no-underline">
-                  Cookie Policy
+                  Política de Cookies
                 </Link>
               </li>
             </ul>
@@ -136,7 +134,7 @@ const Footer = () => {
         </div>
         <div className="w-306 h-152 flex flex-col justify-between">
           <div>
-            <p className="text-2xl font-semibold">Language & Currency</p>
+            <p className="text-2xl font-semibold">Idioma y Moneda</p>
           </div>
           <div className="flex items-center space-x-4">
             <select
@@ -144,7 +142,7 @@ const Footer = () => {
               defaultValue={"english"}
             >
               <option value="english">English</option>
-              <option value="spanish">Spanish</option>
+              <option value="spanish">Español</option>
             </select>
           </div>
           <div>
@@ -165,12 +163,12 @@ const Footer = () => {
           <SeParteLogo />
         </Link>
         <div className="flex h-6 w-3/5 flex-row justify-between">
-          <p>2024. All right reserved</p>
+          <p>2024. Todos los derechos reservados</p>
           <div className="flex h-6 w-48 justify-around">
             <Link href={"#"}>
               <Image
                 src="/images/bi_skype.png"
-                alt="Descripción de la imagen"
+                alt="skype"
                 width={24}
                 height={24}
               />
@@ -178,7 +176,7 @@ const Footer = () => {
             <Link href={"#"}>
               <Image
                 src="/images/bi_facebook.png"
-                alt="Descripción de la imagen"
+                alt="facebook"
                 width={24}
                 height={24}
               />
@@ -186,7 +184,7 @@ const Footer = () => {
             <Link href={"#"}>
               <Image
                 src="/images/bi_linkedin.png"
-                alt="Descripción de la imagen"
+                alt="linkedin"
                 width={24}
                 height={24}
               />
@@ -194,7 +192,7 @@ const Footer = () => {
             <Link href={"#"}>
               <Image
                 src="/images/bi_youtube.png"
-                alt="Descripción de la imagen"
+                alt="youtube"
                 width={24}
                 height={24}
               />
@@ -202,7 +200,7 @@ const Footer = () => {
             <Link href={"#"}>
               <Image
                 src="/images/bi_twitter.png"
-                alt="Descripción de la imagen"
+                alt="X"
                 width={24}
                 height={24}
               />

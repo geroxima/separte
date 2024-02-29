@@ -7,7 +7,7 @@ const FeaturedCard = ({ campaigns }) => {
       <div className="col-span-8 row-span-2 flex flex-col rounded-lg shadow-lg ">
         <div>
           <Image
-            src="https://img.freepik.com/fotos-premium/doctor-enfermera-haciendo-cirugia-paciente_51195-6233.jpg"
+            src={campaigns[0].img}
             alt="placeholder"
             width={600}
             height={900}
@@ -37,10 +37,10 @@ const FeaturedCard = ({ campaigns }) => {
             </div>
             <div className="flex justify-between">
               <span className="text-sm font-bold text-gray-500">
-                {campaigns[0].backers} backers
+                {campaigns[0].backers} donadores
               </span>
               <span className="text-sm font-bold text-gray-500">
-                {campaigns[0].daysLeft} days left
+                {campaigns[0].daysLeft} días restantes
               </span>
             </div>
           </div>
@@ -50,7 +50,7 @@ const FeaturedCard = ({ campaigns }) => {
       <div className="col-span-4 flex max-w-full flex-col rounded-lg shadow-lg">
         <div>
           <Image
-            src="https://img.freepik.com/fotos-premium/doctor-enfermera-haciendo-cirugia-paciente_51195-6233.jpg"
+            src={campaigns[1].img}
             alt="placeholder"
             width={300}
             height={200}
@@ -80,10 +80,10 @@ const FeaturedCard = ({ campaigns }) => {
             </div>
             <div className="flex justify-between">
               <span className="text-sm font-bold text-gray-500">
-                {campaigns[1].backers} backers
+                {campaigns[1].backers} donadores
               </span>
               <span className="text-sm font-bold text-gray-500">
-                {campaigns[1].daysLeft} days left
+                {campaigns[1].daysLeft} días restantes
               </span>
             </div>
           </div>
@@ -92,7 +92,7 @@ const FeaturedCard = ({ campaigns }) => {
       <div className="col-span-4 row-span-1  flex max-w-full flex-col rounded-lg shadow-lg">
         <div>
           <Image
-            src="https://img.freepik.com/fotos-premium/doctor-enfermera-haciendo-cirugia-paciente_51195-6233.jpg"
+            src={campaigns[2].img}
             alt="placeholder"
             width={300}
             height={200}
@@ -122,10 +122,10 @@ const FeaturedCard = ({ campaigns }) => {
             </div>
             <div className="flex justify-between">
               <span className="text-sm font-bold text-gray-500">
-                {campaigns[2].backers} backers
+                {campaigns[2].backers} donadores
               </span>
               <span className="text-sm font-bold text-gray-500">
-                {campaigns[2].daysLeft} days left
+                {campaigns[2].daysLeft} días restantes
               </span>
             </div>
           </div>

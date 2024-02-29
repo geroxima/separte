@@ -12,30 +12,30 @@ const WhoWeAre = () => {
         />
         <div className="block bg-white md:absolute md:left-36 md:top-[80%] md:z-10 md:w-9/12">
           <div className="mt-8 px-3">
-            <h2 className="mb-2 text-3xl font-bold">Who Are We?</h2>
+            <h2 className="mb-2 text-3xl font-bold">Quiénes Somos?</h2>
             <p className="text-lg">
-              Sé Parte is a Paraguayan crowdfunding platform developed as part
-              of the final group project of Coding Dojo's Full Stack MERN
-              bootcamp. We are dedicated to connecting Paraguayan entrepreneurs
-              with passionate people who want to contribute to exceptional
-              projects.
+              Sé Parte es una plataforma de crowdfunding paraguaya desarrollada
+              como parte del proyecto grupal final del bootcamp Full Stack MERN
+              de Coding Dojo. Nos dedicamos a conectar emprendedores paraguayos
+              con personas apasionadas que quieran contribuir a proyectos
+              excepcionales.
             </p>
           </div>
         </div>
       </div>
       <div className="mt-40 flex flex-row justify-around">
         <div className=" w-2/4">
-          <h2 className="mb-2 text-3xl font-bold">Why We Started?</h2>
+          <h2 className="mb-2 text-3xl font-bold">Por qué Iniciamos?</h2>
           <p className="text-lg">
-            We decided to launch Sé Parte with the vision of being a key driver
-            for the entrepreneurial community in Paraguay. Our goal is to
-            facilitate access to financing and the necessary resources so that
-            entrepreneurs can bring their ideas to reality. We firmly believe in
-            the power of collaboration and community to create a positive and
-            lasting impact on our society. With Sé Parte, we want to create a
-            space where entrepreneurs can connect with passionate people who
-            want to contribute to the growth and development of exceptional
-            projects.
+            Decidimos lanzar Sé Parte con la visión de ser un impulsor clave
+            para la comunidad empresarial del Paraguay. Nuestro objetivo es
+            facilitar el acceso a la financiación y a los recursos necesarios
+            para que Los emprendedores pueden hacer realidad sus ideas. Creemos
+            firmemente en el poder de la colaboración y la comunidad para crear
+            un ambiente positivo y impacto duradero en nuestra sociedad. Con Sé
+            Parte queremos crear un espacio donde los emprendedores pueden
+            conectarse con personas apasionadas que quieran contribuir al
+            crecimiento y desarrollo de excepcionales proyectos.
           </p>
         </div>
         <div className="w-2/4">
@@ -49,7 +49,7 @@ const WhoWeAre = () => {
         </div>
       </div>
       <h2 className="mt-28 text-3xl font-bold">
-        Meet Our <br /> Team
+        Conoce a Nuestro <br /> Grupo
       </h2>
       <div className="container mt-8">
         <div className="grid grid-cols-1 gap-4 md:grid-cols-4">

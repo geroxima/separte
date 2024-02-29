@@ -21,9 +21,12 @@ const campaignSchema = new mongoose.Schema(
       type: Date,
       required: true,
     },
-    description: {
+    shortDescription: {
       type: String,
       required: true,
+    },
+    description: {
+      type: String,
     },
     donorsCount: {
       type: Number,

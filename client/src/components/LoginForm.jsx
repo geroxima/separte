@@ -58,7 +58,7 @@ const LoginForm = () => {
       <div className="flex-1">
         <Image
           src="/images/login.png"
-          alt="login image"
+          alt="Imagen de Login"
           width={500}
           height={500}
           className="object-fill"
@@ -78,7 +78,7 @@ const LoginForm = () => {
               type="email"
               id="email"
               name="email"
-              placeholder="Enter your email"
+              placeholder="Ingresa tu Email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               className="rounded-md border border-gray-300 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
@@ -90,7 +90,7 @@ const LoginForm = () => {
                 Contraseña
               </label>
               <Link href="/forgot-password" className="text-sm text-gray-400">
-                Olvidaste la contraseña?
+                ¿Olvidaste la contraseña?
               </Link>
             </div>
 
@@ -100,7 +100,7 @@ const LoginForm = () => {
               name="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              placeholder="Enter your password"
+              placeholder="Ingresa tu Contraseña"
               className="rounded-md border border-gray-300 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
           </div>
@@ -108,12 +108,12 @@ const LoginForm = () => {
             type="submit"
             className="rounded-md bg-blue-500 px-4 py-2 text-white hover:bg-blue-600"
           >
-            Login
+            Ingresar
           </button>
         </form>
         <div className="flex w-full items-center">
           <span className="border-1 flex-1 border-solid border-gray-200"></span>
-          <span className="flex-shrink-0 px-1 text-gray-400">OR</span>
+          <span className="flex-shrink-0 px-1 text-gray-400">Acceder con</span>
           <span className="border-1 flex-1 border-solid border-gray-200"></span>
         </div>
         <div className="flex w-full flex-col justify-center gap-4">
@@ -133,9 +133,9 @@ const LoginForm = () => {
         </div>
         <div>
           <span>
-            Nuevo en Se Parte?
+          ¿Nuevo en Se Parte?
             <Link href="/register" className="font- px-2 text-black">
-              Register
+              Registrarse
             </Link>
           </span>
         </div>
