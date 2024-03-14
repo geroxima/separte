@@ -57,7 +57,7 @@ const WhoWeAre = () => {
         </div>
       </div>
       <h2 className="mt-28 text-3xl font-bold">
-        Conoce a Nuestro <br /> Grupo
+        Conoce a Nuestro Grupo
       </h2>
       <div className="container mt-8">
         <div className="grid grid-cols-1 gap-4 md:grid-cols-4">
@@ -69,7 +69,7 @@ const WhoWeAre = () => {
                   alt="imagen principal"
                   width={200}
                   height={200}
-                  className="mb-3 w-full"
+                  className="mb-3 w-full rounded-md"
                 />
                 <h5 className="mb-2 text-xl font-bold">Pablo Ortiz</h5>
                 <p className="text-lg">Frontend Dev</p>
@@ -84,7 +84,7 @@ const WhoWeAre = () => {
                   alt="imagen principal"
                   width={200}
                   height={200}
-                  className="mb-3 w-full"
+                  className="mb-3 w-full rounded-md"
                 />
                 <h5 className="mb-2 text-xl font-bold">Marcos Ferreira</h5>
                 <p className="text-lg">Full Stack Dev</p>
@@ -99,7 +99,7 @@ const WhoWeAre = () => {
                   alt="imagen principal"
                   width={200}
                   height={200}
-                  className="mb-3 w-full"
+                  className="mb-3 w-full rounded-md"
                 />
                 <h5 className="mb-2 text-xl font-bold">Adan Alvarez</h5>
                 <p className="text-lg">Frontend Dev</p>
@@ -114,7 +114,7 @@ const WhoWeAre = () => {
                   alt="imagen principal"
                   width={200}
                   height={200}
-                  className="mb-3 w-full h-75%"
+                  className="mb-3 w-full rounded-md h-75%"
                 />
                 <h5 className="mb-2 text-xl font-bold">Maylen Zaracho</h5>
                 <p className="text-lg">Frontend Dev</p>

@@ -161,7 +161,7 @@ const NewProjectPage = () => {
                   name="name"
                   value={formData.name}
                   onChange={handleInputChange}
-                  className="rounded-md border border-gray-300 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="rounded-md border border-gray-300 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary-green"
                 />
               </div>
               <div className="mb-4 flex flex-col">
@@ -174,7 +174,7 @@ const NewProjectPage = () => {
                   name="location"
                   value={formData.location}
                   onChange={handleInputChange}
-                  className="rounded-md border border-gray-300 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="rounded-md border border-gray-300 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary-green"
                 />
               </div>
               <div className="mb-4 flex flex-col">
@@ -202,7 +202,7 @@ const NewProjectPage = () => {
               </div>
               <button
                 type="submit"
-                className="rounded-md bg-blue-500 px-4 py-2 text-white hover:bg-blue-600"
+                className="rounded-md bg-primary-green px-4 py-2 text-text-whtie hover:seconday-green"
               >
                 Siguiente
               </button>
@@ -233,7 +233,7 @@ const NewProjectPage = () => {
                   value={formData.amount}
                   onChange={handleInputChange}
                   placeholder="Ingresa tu monto en guaranies"
-                  className="rounded-md border border-gray-300 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="rounded-md border border-gray-300 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary-green"
                 />
               </div>
 
@@ -259,13 +259,13 @@ const NewProjectPage = () => {
                 <button
                   onClick={() => setStage(1)}
                   type="button"
-                  className="w-1/2 rounded-md bg-red-500 px-4 py-2 text-white hover:bg-red-600"
+                  className="w-1/2 rounded-md bg-red-200 px-4 py-2 text-red-600 hover:bg-red-400"
                 >
                   Atras
                 </button>
                 <button
                   type="submit"
-                  className="w-1/2 rounded-md bg-blue-500 px-4 py-2 text-white hover:bg-blue-600"
+                  className="w-1/2 rounded-md bg-primary-green px-4 py-2 text-white hover:bg-secondary-green"
                 >
                   Siguiente
                 </button>
@@ -292,7 +292,7 @@ const NewProjectPage = () => {
                   value={formData.campaignName}
                   onChange={handleInputChange}
                   placeholder=""
-                  className="rounded-md border border-gray-300 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="rounded-md border border-gray-300 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary-green"
                 />
               </div>
               <div className="mb-4 flex flex-col">
@@ -320,7 +320,7 @@ const NewProjectPage = () => {
 
               <button
                 type="submit"
-                className="rounded-md bg-blue-500 px-4 py-2 text-white hover:bg-blue-600"
+                className="rounded-md bg-primary-green px-4 py-2 text-white hover:bg-secondary-green"
               >
                 Siguiente
               </button>

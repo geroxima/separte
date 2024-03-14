@@ -1,4 +1,7 @@
+
 # Sé Parte - Plataforma de Crowdfunding Paraguaya
+
+![readme.png](readme.png)
 
 ¡Bienvenido a Sé Parte, la plataforma de crowdfunding paraguaya! Sé Parte es un proyecto de código abierto desarrollado como parte del proyecto grupal final del bootcamp Full Stack MERN de Coding Dojo. Estamos emocionados de presentarte una plataforma innovadora que conecta a los emprendedores paraguayos con personas apasionadas que desean contribuir a proyectos excepcionales.
 
@@ -15,3 +18,4 @@ Sé Parte es una plataforma de crowdfunding diseñada específicamente para la c
 - **Transparencia:** Ofrecemos total transparencia en el proceso de financiamiento. Los emprendedores compartirán actualizaciones regulares con sus patrocinadores, brindando una visión clara del progreso del proyecto.
 
 ¡Gracias por ser parte de Sé Parte! Juntos, estamos construyendo un futuro más brillante para la innovación y la creatividad paraguayas.
+
