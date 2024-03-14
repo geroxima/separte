@@ -4,7 +4,7 @@ import Link from "next/link";
 const NearYouCard = ({ campaign }) => {
   return (
     <Link href={`/project/${campaign._id}`}>
-      <div className="col-span-1 flex flex-col rounded-lg shadow-lg min-h-[300px] overflow-hidden">
+      <div className="col-span-1 flex min-h-[300px] flex-col overflow-hidden rounded-lg shadow-lg">
         <div className="w-full">
           <Image
             src={campaign.img}
@@ -30,7 +30,7 @@ const NearYouCard = ({ campaign }) => {
               <div
                 className="h-full rounded-full bg-green-500 text-center text-xs text-white"
                 style={{
-                  width: `${(campaign.currentAmount / campaign.goalAmount) * 100}%`,
+                  width: `${Math.min((campaign.currentAmount / campaign.goalAmount) * 100, 100)}%`,
                 }}
               ></div>
             </div>

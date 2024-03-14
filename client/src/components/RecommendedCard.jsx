@@ -20,7 +20,9 @@ const RecommendedCard = ({ campaign }) => {
       <Link href={`/project/${campaign._id}`}>
         <div className="flex flex-col gap-1 p-4">
           <h3 className="m-0 text-xl font-bold">{campaign.title}</h3>
-          <p className="text-pretty min-h-[300px]">{campaign.shortDescription}</p>
+          <p className="min-h-[300px] text-pretty">
+            {campaign.shortDescription}
+          </p>
           <div className="flex flex-col gap-2">
             <div className="flex justify-between">
               <span className="text-xl font-semibold text-green-700">
@@ -34,7 +36,7 @@ const RecommendedCard = ({ campaign }) => {
               <div
                 className="h-full rounded-full bg-green-500 text-center text-xs text-white"
                 style={{
-                  width: `${(campaign.currentAmount / campaign.goalAmount) * 100}%`,
+                  width: `${Math.min((campaign.currentAmount / campaign.goalAmount) * 100, 100)}%`,
                 }}
               ></div>
             </div>
@@ -54,7 +56,7 @@ const RecommendedCard = ({ campaign }) => {
               <p className="font-bold">{campaign.fundraiserName}</p>
               <p className="text-sm">{campaign.location}</p>
             </div>
-            <div className="relative size-16 overflow-hidden rounded-full ml-auto">
+            <div className="relative ml-auto size-16 overflow-hidden rounded-full">
               <Image
                 src="https://img.freepik.com/free-vector/background-gradient-green-tones_23-2148360340.jpg"
                 alt="Imagen del creador de la campaña"
